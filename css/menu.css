@@ -54,7 +54,7 @@ img {
 	text-decoration: none; /*removes active link underline*/
 }
 .nvbarsel {
-		display: block;
+	display: block;
 	color: #cfcfcf;
 	text-align: center;
 	padding: 8px;
@@ -72,7 +72,7 @@ img {
 	text-shadow: 1px 1px;
 }
 
-.hidden {
+.template {
 	display: none;
 }
 .teams {
