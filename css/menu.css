@@ -21,37 +21,37 @@
 	
 }
 .nvbar > ul > li {
-	/*display: inline;*/
-	float: left;
+	float: left; /*Side the navbar buttons are located*/
 }
 .nvbar > ul > li > a {
-	display: block;
-	color: #cfcfcf;
-	text-align: center;
-	padding: 8px;
-	background-color: #333388;
+	display: block; /*navbar thickness*/
+	color: #cfcfcf; /*navbar text color*/
+	text-align: center; /*text alignment*/
+	padding: 8px 8px 8px 8px; /*change to edit navbar size*/
+	/*order= top right bottom left*/
+	background-color: #333388; /*navbar button color*/
 }
 .nvbar > ul > li > a:hover {
-
-	background-color: #222288;
-	text-decoration: none;
+	background-color: #222288; /*selected navbar button color*/
+	text-decoration: none; /*removes link underline*/
 }
 body {
-	background-color: #eeeeee;
-	margin: 0;
+	background-color: #eeeeee; /*background color*/
+	margin: 0; /*outer border*/
+	color: 000000; /*border color*/
 }
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /*max image width*/
+  height: auto; /*image auto resizing*/
 }
 .nvbar > ul > li > a:link {
-	text-decoration: none;
+	text-decoration: none; /*removes unclicked link underline*/
 }
 .nvbar > ul > li > a:visited {
-	text-decoration: none;
+	text-decoration: none; /*removes already-used link underline*/
 }
 .nvbar > ul > li > a:active {
-	text-decoration: none;
+	text-decoration: none; /*removes active link underline*/
 }
 .nvbarsel {
 		display: block;
@@ -64,9 +64,17 @@ img {
 	margin: 1;
 	padding: 0;
 	white-space: pre;
+	text-align: Left;
 }
 .bold {
 	text-transform: uppercase;
 	text-align: center;
 	text-shadow: 1px 1px;
+}
+
+.hidden {
+	display: none;
+}
+.teams {
+	margin: 0;
 }
