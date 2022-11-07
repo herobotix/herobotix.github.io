@@ -1,3 +1,9 @@
+body {
+	background-color: #eeeeee; /*background color*/
+	margin: 0; /*outer border*/
+	color: #000000; /*border color*/
+}
+
 .title {
 	text-transform: uppercase;
 	text-align: center;
@@ -5,67 +11,55 @@
 	color: #009fcf;
 	background-color: #000000;
 }
+
+.title img {
+  max-width: 100%; /*max image width*/
+  height: auto; /*image auto resizing*/
+}
+
 .title > span > a:hover {
-	padding-left:2;
+  opacity: 0.95;
 }
+
 .nvbar {
-	border-style: outset hidden solid hidden;
-	border-color: #222277 #000000 #222255 #000000;
+	border-style: solid hidden;
+	border-color: #222277 #000000 #222255;
 }
+
 .nvbar > ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	background-color: #333388;
-	
 }
+
 .nvbar > ul > li {
 	float: left; /*Side the navbar buttons are located*/
 }
+
 .nvbar > ul > li > a {
-	display: block; /*navbar thickness*/
+	display: block; /*makes padding visible*/
 	color: #cfcfcf; /*navbar text color*/
 	text-align: center; /*text alignment*/
 	padding: 8px 8px 8px 8px; /*change to edit navbar size*/
 	/*order= top right bottom left*/
 	background-color: #333388; /*navbar button color*/
+  text-decoration: none;
 }
+
 .nvbar > ul > li > a:hover {
 	background-color: #222288; /*selected navbar button color*/
-	text-decoration: none; /*removes link underline*/
 }
-body {
-	background-color: #eeeeee; /*background color*/
-	margin: 0; /*outer border*/
-	color: 000000; /*border color*/
-}
-img {
-  max-width: 100%; /*max image width*/
-  height: auto; /*image auto resizing*/
-}
-.nvbar > ul > li > a:link {
-	text-decoration: none; /*removes unclicked link underline*/
-}
-.nvbar > ul > li > a:visited {
-	text-decoration: none; /*removes already-used link underline*/
-}
-.nvbar > ul > li > a:active {
-	text-decoration: none; /*removes active link underline*/
-}
-.nvbarsel {
+
+.nvbar > ul > li.selected {
 	display: block;
 	color: #cfcfcf;
 	text-align: center;
 	padding: 8px;
 	background-color: #111177;
 }
-.text {
-	margin: 1;
-	padding: 0;
-	white-space: pre;
-	text-align: Left;
-}
+
 .bold {
 	text-transform: uppercase;
 	text-align: center;
@@ -74,7 +68,4 @@ img {
 
 .template {
 	display: none;
-}
-.teams {
-	margin: 0;
 }
