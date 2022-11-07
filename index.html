@@ -1,21 +1,55 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="css/menu.css">
+		<link rel="stylesheet" href="css/menu.css"/>
+		<script>
+			function ready(f) {
+				if (document.readyState === "complete" || document.readyState === "interactive") setTimeout(f, 0);
+				else document.addEventListener("DOMContentLoaded", f);
+			}
+		</script>
 	</head>
 	<body>
-		<div class="title">
-			<span><img src="images/logo.png" alt="Logo"></span>
+		<div class="title"> <!--Title-->
+			<span><a href=""><img src="images/logo.png" alt="Logo"></a></span>
 		</div>
-		<!-- -->
-		<nav class="nvbar">
+		<nav class="nvbar"> <!--Menu-->
 			<ul>
-				<li><a href="teams.html">Teams</a></li>
-				<!--li><a href="Link2.html">Link2</a></li>
-				<li><a href="Link3.html">Link3</a></li>
-				<li><a href="Link4.html">Link4</a></li-->
+				<li><a href="">Home</a></li>
+				<li><a href="#volunteer">Volunteer</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#videos">Videos</a></li>
+				<li><a href="#teams">Teams</a></li>
+				<li><a href="#donations">Donations</a></li>
 			</ul>
 		</nav>
-		Startpage
+		<div id="pageBody"> <!--Content-->
+			Loading...
+		</div>
+		<div class="homepage template">
+			Welcome!
+		</div>
+		<div class="volunteer template">
+			
+		</div>
+		<div class="about template">
+			
+		</div>
+		<div class="videos template">
+			
+		</div>
+		<div class="teams template">
+			<ul>
+        <span class="bold">Teams</span>
+				<li><a href="https://beaniebots.herobotix.com">Beaniebots</a></li>
+				<li><a href="https://cis.herobotix.com">C.I.S.</a></li>
+				<li><a href="https://spartech.herobotix.com">Spar-Tech</a></li>
+			</ul>
+		</div>
+		<div class="donations template">
+			
+		</div>
+	
+		<script type="text/javascript" language="javascript" src="js/pages.js"></script>
 	</body>
 </html>
