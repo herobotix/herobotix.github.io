@@ -1,7 +1,7 @@
 body {
 	background-color: #eeeeee; /*background color*/
 	margin: 0; /*outer border*/
-	color: #000000; /*border color*/
+	color: #020202; /*border color*/
 }
 
 .title {
@@ -13,12 +13,12 @@ body {
 }
 
 .title img {
-  max-width: 100%; /*max image width*/
-  height: auto; /*image auto resizing*/
+	max-width: 100%; /*max image width*/
+	height: auto; /*image auto resizing*/
 }
 
 .title > span > a:hover {
-  opacity: 0.95;
+	opacity: 0.95;
 }
 
 .nvbar {
@@ -45,7 +45,7 @@ body {
 	padding: 8px 8px 8px 8px; /*change to edit navbar size*/
 	/*order= top right bottom left*/
 	background-color: #333388; /*navbar button color*/
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .nvbar > ul > li > a:hover {
@@ -58,12 +58,6 @@ body {
 	text-align: center;
 	padding: 8px;
 	background-color: #111177;
-}
-
-.bold {
-	text-transform: uppercase;
-	text-align: center;
-	text-shadow: 1px 1px;
 }
 
 .template {

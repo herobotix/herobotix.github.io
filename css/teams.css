@@ -1,0 +1,35 @@
+.bold {
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 1px 1px;
+}
+
+.teambox > li {
+	background-color: #333388; /*teambox color*/
+	margin: 2px;
+	padding: 0;
+}
+
+.teambox > li > span {
+	display: block;
+	overflow: hidden;
+	padding: 0;
+	border-style: solid;
+	border-color: #222288 #222244 #222244 #222288;
+}
+
+.teambox > li > span > a {
+	color: #cfcfcf; /*text color*/
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 2px;
+}
+
+.teambox > li > span > img {
+	margin: 0;
+	padding: 0;
+}
+
+.teambox {
+	list-style-type: none;
+}
