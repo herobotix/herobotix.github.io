@@ -26,8 +26,9 @@
 }
 
 .teambox > li > span > img {
-	margin: 0;
-	padding: 0;
+	vertical-align: top; /*moves image & text up*/
+	max-width: 100%; /*max image width*/
+	height: auto; /*image auto resizing*/
 }
 
 .teambox {

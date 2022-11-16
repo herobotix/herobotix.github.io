@@ -8,16 +8,23 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	text-shadow: 1px 1px;
+	color: #050505;
+}
+
+.nvbartitle {
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 1px 1px;
 	color: #009fcf;
 	background-color: #000000;
 }
 
-.title img {
+.nvbartitle img {
 	max-width: 100%; /*max image width*/
 	height: auto; /*image auto resizing*/
 }
 
-.title > span > a:hover {
+.nvbartitle > span > a:hover {
 	opacity: 0.95;
 }
 
