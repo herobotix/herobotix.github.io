@@ -1,14 +1,7 @@
 body {
-	background-color: #eeeeee; /*background color*/
+	background-color: #dddddd; /*background color*/
 	margin: 0; /*outer border*/
 	color: #020202; /*border color*/
-}
-
-.title {
-	text-transform: uppercase;
-	text-align: center;
-	text-shadow: 1px 1px;
-	color: #050505;
 }
 
 .nvbartitle {

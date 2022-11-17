@@ -27,10 +27,24 @@
 
 .teambox > li > span > img {
 	vertical-align: top; /*moves image & text up*/
-	max-width: 100%; /*max image width*/
+	max-width: 18.5%; /*max image width*/
 	height: auto; /*image auto resizing*/
 }
 
 .teambox {
 	list-style-type: none;
+}
+
+.teamstitle {
+	text-align: center;
+}
+
+.teamstitle > img {
+	text-transform: uppercase;
+	text-shadow: 1px 1px;
+	color: #050505;
+	border-style: solid;
+	border-color: #777777 #555555 #555555 #777777;
+	max-width: 50%; /*max image width*/
+	height: auto; /*image auto resizing*/
 }
