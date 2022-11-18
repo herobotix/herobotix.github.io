@@ -20,22 +20,29 @@
 	/*teambox border color*/
 }
 
-.teambox > li > span > a {
-	color: #cfcfcf;
+.teambox > li > span > span {
+	padding: 4px;
+}
+
+.teambox > li > span > span > a {
+	/*color: #cfcfcf;*/
+	color: black;
 	/*text color*/
 	text-align: center;
 	text-decoration: none;
 	margin-bottom: 2px;
+	text-shadow: 0px 0px 4px white;
 }
 
 .teambox > li > span > img {
+	padding: 1px;
 	vertical-align: top;
 	/*moves image & text up*/
 	max-width: 18.5%;
 	/*max image width*/
 	height: auto;
 	/*image auto resizing*/
-	border-style: solid;
+	border-style: /*hidden */solid/* hidden hidden*/;
 	border-color: #222244 #222288 #222288 #222244;
 	/*teambox image border color*/
 }
@@ -54,6 +61,7 @@
 	color: #050505;
 	border-style: solid;
 	border-color: #777777 #555555 #555555 #777777;
+	/*title border color*/
 	max-width: 50%;
 	/*max image width*/
 	height: auto;
