@@ -1,10 +1,10 @@
 body {
-	background-color: #eeeeee; /*background color*/
+	background-color: #dddddd; /*background color*/
 	margin: 0; /*outer border*/
-	color: #000000; /*border color*/
+	color: #020202; /*border color*/
 }
 
-.title {
+.nvbartitle {
 	text-transform: uppercase;
 	text-align: center;
 	text-shadow: 1px 1px;
@@ -12,13 +12,13 @@ body {
 	background-color: #000000;
 }
 
-.title img {
-  max-width: 100%; /*max image width*/
-  height: auto; /*image auto resizing*/
+.nvbartitle img {
+	max-width: 100%; /*max image width*/
+	height: auto; /*image auto resizing*/
 }
 
-.title > span > a:hover {
-  opacity: 0.95;
+.nvbartitle > span > a:hover {
+	opacity: 0.95;
 }
 
 .nvbar {
@@ -31,7 +31,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333388;
+	background-color: #333388; /*navbar color*/
 }
 
 .nvbar > ul > li {
@@ -41,11 +41,11 @@ body {
 .nvbar > ul > li > a {
 	display: block; /*makes padding visible*/
 	color: #cfcfcf; /*navbar text color*/
-	text-align: center; /*text alignment*/
+	text-align: center;
 	padding: 8px 8px 8px 8px; /*change to edit navbar size*/
 	/*order= top right bottom left*/
 	background-color: #333388; /*navbar button color*/
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .nvbar > ul > li > a:hover {
@@ -58,12 +58,6 @@ body {
 	text-align: center;
 	padding: 8px;
 	background-color: #111177;
-}
-
-.bold {
-	text-transform: uppercase;
-	text-align: center;
-	text-shadow: 1px 1px;
 }
 
 .template {

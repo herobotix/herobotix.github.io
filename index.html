@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<title>Herobotix</title>
 		<link rel="stylesheet" href="css/menu.css"/>
+		<link rel="stylesheet" href="css/teams.css"/>
 		<script>
 			function ready(f) {
 				if (document.readyState === "complete" || document.readyState === "interactive") setTimeout(f, 0);
@@ -10,7 +12,7 @@
 		</script>
 	</head>
 	<body>
-		<div class="title"> <!--Title-->
+		<div class="nvbartitle"> <!--Title-->
 			<span><a href="#"><img src="images/logo.png" alt="Logo"></a></span>
 		</div>
 		<nav class="nvbar"> <!--Menu-->
@@ -24,9 +26,9 @@
 			</ul>
 		</nav>
 		<div id="pageBody"> <!--Content-->
-			Loading...
+			<div class="bold">Loading...</div>
 		</div>
-		<div class="homepage template">
+		<div class="homepage template"> 
 			Welcome!
 		</div>
 		<div class="volunteer template">
@@ -39,11 +41,32 @@
 			
 		</div>
 		<div class="teams template">
-			<ul>
-        <span class="bold">Teams</span>
-				<li><a href="https://beaniebots.herobotix.com">Beaniebots</a></li>
-				<li><a href="https://cis.herobotix.com">C.I.S.</a></li>
-				<li><a href="https://spartech.herobotix.com">Spar-Tech</a></li>
+			<div class="teamstitle"><img src="images/teams/teams.png" alt="TEAMS"></div>
+			<ul class="teambox">
+				<li> <!--beaniebots teambox-->
+					<span>
+						<img src="images/teams/beaniebots_logo.jpg" alt="cube">
+						<span>
+							<a href="https://beaniebots.herobotix.com">BeanieBots</a>
+						</span>
+					</span>
+				</li>
+				<li> <!--cis teambox-->
+					<span>
+						<img src="images/teams/cis_logo.png" alt="cube">
+						<span>
+							<a href="https://cis.herobotix.com">C.I.S.</a>
+						</span>
+					</span>
+				</li>
+				<li><!--spar-tech teambox-->
+					<span>
+						<img src="images/teams/spartech_logo.png" alt="cube">
+						<span>
+							<a href="https://spartech.herobotix.com">Spar-Tech</a>
+						</span>
+					</span>
+				</li>
 			</ul>
 		</div>
 		<div class="donations template">
