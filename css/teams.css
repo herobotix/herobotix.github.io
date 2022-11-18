@@ -5,7 +5,8 @@
 }
 
 .teambox > li {
-	background-color: #333388; /*teambox color*/
+	background-color: #444499;
+	/*teambox color*/
 	margin: 2px;
 	padding: 0;
 }
@@ -15,20 +16,28 @@
 	overflow: hidden;
 	padding: 0;
 	border-style: solid;
-	border-color: #222288 #222244 #222244 #222288;
+	border-color: #111177 #111133 #111133 #111177;
+	/*teambox border color*/
 }
 
 .teambox > li > span > a {
-	color: #cfcfcf; /*text color*/
+	color: #cfcfcf;
+	/*text color*/
 	text-align: center;
 	text-decoration: none;
 	margin-bottom: 2px;
 }
 
 .teambox > li > span > img {
-	vertical-align: top; /*moves image & text up*/
-	max-width: 18.5%; /*max image width*/
-	height: auto; /*image auto resizing*/
+	vertical-align: top;
+	/*moves image & text up*/
+	max-width: 18.5%;
+	/*max image width*/
+	height: auto;
+	/*image auto resizing*/
+	border-style: solid;
+	border-color: #222244 #222288 #222288 #222244;
+	/*teambox image border color*/
 }
 
 .teambox {
@@ -45,6 +54,8 @@
 	color: #050505;
 	border-style: solid;
 	border-color: #777777 #555555 #555555 #777777;
-	max-width: 50%; /*max image width*/
-	height: auto; /*image auto resizing*/
+	max-width: 50%;
+	/*max image width*/
+	height: auto;
+	/*image auto resizing*/
 }
