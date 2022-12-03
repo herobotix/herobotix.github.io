@@ -32,6 +32,7 @@ body {
 	padding: 0;
 	overflow: hidden;
 	background-color: #333388; /*navbar color*/
+	font-size: 1.2em; /*navbar font size*/
 }
 
 .nvbar > ul > span > li {
@@ -46,7 +47,7 @@ body {
 	display: block; /*makes padding visible*/
 	color: #cfcfcf; /*right navbar text color*/
 	text-align: center;
-	padding: 8px 8px 8px 8px; /*right navbar text size*/
+	padding: 8px; /*right navbar padding*/
 	/*order= top right bottom left*/
 	background-color: #333388; /* right navbar button color*/
 	text-decoration: none;
@@ -56,8 +57,8 @@ body {
 	display: block; /*makes padding visible*/
 	color: #cfcfcf; /*left navbar text color*/
 	text-align: center;
-	padding: 8px 8px 8px 8px; /*left navbar text size*/
-	/*left navbar text size = navbar size*/
+	padding: 8px; /*left navbar padding*/
+	/*largest navbar padding = navbar size*/
 	background-color: #333388; /*left navbar button color*/
 	text-decoration: none;
 }
