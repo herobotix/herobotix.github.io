@@ -32,19 +32,34 @@ body {
 	padding: 0;
 	overflow: hidden;
 	background-color: #333388; /*navbar color*/
+	font-size: 1.2em; /*navbar font size*/
+}
+
+.nvbar > ul > span > li {
+	float: left; /*Side the left navbar buttons are located*/
 }
 
 .nvbar > ul > li {
-	float: left; /*Side the navbar buttons are located*/
+	float: right; /*Side the right navbar buttons are located*/
 }
 
 .nvbar > ul > li > a {
 	display: block; /*makes padding visible*/
-	color: #cfcfcf; /*navbar text color*/
+	color: #cfcfcf; /*right navbar text color*/
 	text-align: center;
-	padding: 8px 8px 8px 8px; /*change to edit navbar size*/
+	padding: 8px; /*right navbar padding*/
 	/*order= top right bottom left*/
-	background-color: #333388; /*navbar button color*/
+	background-color: #333388; /* right navbar button color*/
+	text-decoration: none;
+}
+
+.nvbar > ul > span > li > a {
+	display: block; /*makes padding visible*/
+	color: #cfcfcf; /*left navbar text color*/
+	text-align: center;
+	padding: 8px; /*left navbar padding*/
+	/*largest navbar padding = navbar size*/
+	background-color: #333388; /*left navbar button color*/
 	text-decoration: none;
 }
 
