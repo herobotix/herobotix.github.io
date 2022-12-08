@@ -12,12 +12,19 @@ body {
 	background-color: #000000;
 }
 
+.nvbartitle ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 .nvbartitle img {
-	max-width: 100%; /*max image width*/
+	max-width: 85%; /*max image width*/
 	height: auto; /*image auto resizing*/
 }
 
-.nvbartitle > span > a:hover {
+.nvbartitle > ul > li > a:hover {
 	opacity: 0.95;
 }
 
@@ -77,4 +84,12 @@ body {
 
 .template {
 	display: none;
+}
+
+.drkmdbutton {
+	max-width: 100%; /*max image width*/
+	height: auto; /*image auto resizing*/
+	position: fixed;
+	right: 3px;
+	top: 3px;
 }
