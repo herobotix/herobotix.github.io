@@ -4,12 +4,21 @@ body {
 	color: #020202; /*border color*/
 }
 
+body.drkmd {
+	background-color: #111111; /*darkmode background color*/
+	color: #dddddd;
+}
+
 .nvbartitle {
 	text-transform: uppercase;
 	text-align: center;
 	text-shadow: 1px 1px;
 	color: #009fcf;
 	background-color: #000000;
+}
+
+body.drkmd .nvbartitle {
+	background-color: #999999;
 }
 
 .nvbartitle ul {
@@ -86,7 +95,7 @@ body {
 	display: none;
 }
 
-.drkmdbutton {
+#drkmdbtn {
 	max-width: 100%; /*max image width*/
 	height: auto; /*image auto resizing*/
 	position: fixed;
