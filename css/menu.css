@@ -2,10 +2,11 @@ body {
 	background-color: #dddddd; /*background color*/
 	margin: 0; /*outer border*/
 	color: #020202; /*border color*/
+	transition: background-color 0.3s;
 }
 
 body.drkmd {
-	background-color: #111111; /*darkmode background color*/
+	background-color: #222222; /*darkmode background color*/
 	color: #dddddd;
 }
 
@@ -14,18 +15,13 @@ body.drkmd {
 	text-align: center;
 	text-shadow: 1px 1px;
 	color: #009fcf;
-	background-color: #000000;
+	/*background-image: linear-gradient(#000000, #444444);*/
+	/*transition: background-image 5s;*/
+	background-image: linear-gradient(#7f7f7f, #3b3b3b);
 }
 
 body.drkmd .nvbartitle {
-	background-color: #999999;
-}
-
-.nvbartitle ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+	/*background-image: linear-gradient(#777777, #bbbbbb);*/
 }
 
 .nvbartitle img {
@@ -33,8 +29,12 @@ body.drkmd .nvbartitle {
 	height: auto; /*image auto resizing*/
 }
 
-.nvbartitle > ul > li > a:hover {
-	opacity: 0.95;
+.nvbartitle > a:hover {
+	opacity: 0.90;
+}
+
+.nvbartitle > img:hover {
+	opacity: 0.90;
 }
 
 .nvbar {
