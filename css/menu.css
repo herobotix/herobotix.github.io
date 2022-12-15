@@ -2,6 +2,12 @@ body {
 	background-color: #dddddd; /*background color*/
 	margin: 0; /*outer border*/
 	color: #020202; /*border color*/
+	transition: background-color 0.3s;
+}
+
+body.drkmd {
+	background-color: #222222; /*darkmode background color*/
+	color: #dddddd;
 }
 
 .nvbartitle {
@@ -9,16 +15,26 @@ body {
 	text-align: center;
 	text-shadow: 1px 1px;
 	color: #009fcf;
-	background-color: #000000;
+	/*background-image: linear-gradient(#000000, #444444);*/
+	/*transition: background-image 5s;*/
+	background-image: linear-gradient(#7f7f7f, #3b3b3b);
+}
+
+body.drkmd .nvbartitle {
+	/*background-image: linear-gradient(#777777, #bbbbbb);*/
 }
 
 .nvbartitle img {
-	max-width: 100%; /*max image width*/
+	max-width: 85%; /*max image width*/
 	height: auto; /*image auto resizing*/
 }
 
-.nvbartitle > span > a:hover {
-	opacity: 0.95;
+.nvbartitle > a:hover {
+	opacity: 0.90;
+}
+
+.nvbartitle > img:hover {
+	opacity: 0.90;
 }
 
 .nvbar {
@@ -77,4 +93,12 @@ body {
 
 .template {
 	display: none;
+}
+
+#drkmdbtn {
+	max-width: 100%; /*max image width*/
+	height: auto; /*image auto resizing*/
+	position: fixed;
+	right: 3px;
+	top: 3px;
 }
