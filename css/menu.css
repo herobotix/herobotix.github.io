@@ -79,7 +79,7 @@ body.drkmd .nvbartitle {
 	text-decoration: none;
 }
 
-.nvbar > ul > li > a:hover {
+.nvbar > ul li > a:hover {
 	background-color: #222288; /*selected navbar button color*/
 }
 
