@@ -15,14 +15,10 @@ body.drkmd {
 	text-align: center;
 	text-shadow: 1px 1px;
 	color: #009fcf;
-	/*background-image: linear-gradient(#000000, #444444);*/
-	/*transition: background-image 5s;*/
 	background-image: linear-gradient(#7f7f7f, #3b3b3b);
 }
 
-body.drkmd .nvbartitle {
-	/*background-image: linear-gradient(#777777, #bbbbbb);*/
-}
+body.drkmd .nvbartitle {}
 
 .nvbartitle img {
 	max-width: 85%; /*max image width*/
@@ -59,6 +55,14 @@ body.drkmd .nvbartitle {
 	float: right; /*Side the right navbar buttons are located*/
 }
 
+.nvbar > ul li > img {
+	height: calc(1.0em + 16px);
+	display: block;
+	border-color: #222244 #222244 #111133 #111133;
+	border-style: solid;
+	border-width: 2px;
+}
+
 .nvbar > ul > li > a {
 	display: block; /*makes padding visible*/
 	color: #cfcfcf; /*right navbar text color*/
@@ -93,6 +97,16 @@ body.drkmd .nvbartitle {
 
 .template {
 	display: none;
+}
+
+.pageTop {
+	position: sticky;
+	top: 0px;
+	left: 50%;
+}
+
+.ovrflw-Auto {
+	overflow: auto;
 }
 
 #drkmdbtn {
