@@ -1,13 +1,6 @@
 body {
-	background-color: #dddddd; /*background color*/
 	margin: 0; /*outer border*/
-	color: #020202; /*border color*/
-	transition: background-color 0.3s;
-}
-
-body.drkmd {
-	background-color: #222222; /*darkmode background color*/
-	color: #dddddd;
+	color: #020202; /*border color*/;
 }
 
 .nvbartitle {
@@ -108,6 +101,24 @@ body.drkmd .nvbartitle {}
 .ovrflw-Auto {
 	overflow: auto;
 }
+
+div#pageBody {
+	height: 100vh;
+	background-color: #0077ee; /*background color*/
+	background-image: url(../images/backgrounds/background.png); /*background image*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	transition: background-color 0.3s;
+	transition: background-image 0.3s;
+}
+
+body.drkmd div#pageBody {
+	background-color: #222222; /*darkmode background color*/
+	background-image: url(../images/backgrounds/drkmd_background.png); /*darkmode background image*/
+	color: #dddddd;
+}
+
 
 #drkmdbtn {
 	max-width: 100%; /*max image width*/
