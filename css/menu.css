@@ -1,13 +1,6 @@
 body {
-	background-color: #dddddd; /*background color*/
 	margin: 0; /*outer border*/
-	color: #020202; /*border color*/
-	transition: background-color 0.3s;
-}
-
-body.drkmd {
-	background-color: #222222; /*darkmode background color*/
-	color: #dddddd;
+	color: #020202; /*border color*/;
 }
 
 .nvbartitle {
@@ -15,14 +8,10 @@ body.drkmd {
 	text-align: center;
 	text-shadow: 1px 1px;
 	color: #009fcf;
-	/*background-image: linear-gradient(#000000, #444444);*/
-	/*transition: background-image 5s;*/
 	background-image: linear-gradient(#7f7f7f, #3b3b3b);
 }
 
-body.drkmd .nvbartitle {
-	/*background-image: linear-gradient(#777777, #bbbbbb);*/
-}
+body.drkmd .nvbartitle {}
 
 .nvbartitle img {
 	max-width: 85%; /*max image width*/
@@ -59,6 +48,14 @@ body.drkmd .nvbartitle {
 	float: right; /*Side the right navbar buttons are located*/
 }
 
+.nvbar > ul li > img {
+	height: calc(1.0em + 16px);
+	display: block;
+	border-color: #222244 #222244 #111133 #111133;
+	border-style: solid;
+	border-width: 2px;
+}
+
 .nvbar > ul > li > a {
 	display: block; /*makes padding visible*/
 	color: #cfcfcf; /*right navbar text color*/
@@ -79,7 +76,7 @@ body.drkmd .nvbartitle {
 	text-decoration: none;
 }
 
-.nvbar > ul > li > a:hover {
+.nvbar > ul li > a:hover {
 	background-color: #222288; /*selected navbar button color*/
 }
 
@@ -94,6 +91,34 @@ body.drkmd .nvbartitle {
 .template {
 	display: none;
 }
+
+.pageTop {
+	position: sticky;
+	top: 0px;
+	left: 50%;
+}
+
+.ovrflw-Auto {
+	overflow: auto;
+}
+
+div#pageBody {
+	height: 150vh;
+	background-color: #0077ee; /*background color*/
+	background-image: url(../images/backgrounds/background.png); /*background image*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	transition: background-color 0.3s;
+	transition: background-image 0.3s;
+}
+
+body.drkmd div#pageBody {
+	background-color: #222222; /*darkmode background color*/
+	background-image: url(../images/backgrounds/drkmd_background.png); /*darkmode background image*/
+	color: #dddddd;
+}
+
 
 #drkmdbtn {
 	max-width: 100%; /*max image width*/

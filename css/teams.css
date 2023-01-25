@@ -11,7 +11,11 @@
 	padding: 0;
 }
 
-.teambox > li > span {
+.teambox > li > a {
+	text-decoration: none;
+}
+
+.teambox > li > a > span {
 	display: block;
 	overflow: hidden;
 	padding: 0;
@@ -20,21 +24,20 @@
 	/*teambox border color*/
 }
 
-.teambox > li > span > span {
+.teambox > li > a > span > span {
 	padding: 4px;
 }
 
-.teambox > li > span > span > a {
+.teambox > li > a > span > span > .teamName {
 	/*color: #cfcfcf;*/
 	color: black;
 	/*text color*/
 	text-align: center;
-	text-decoration: none;
 	margin-bottom: 2px;
 	text-shadow: 0px 0px 4px white;
 }
 
-.teambox > li > span > img {
+.teambox > li > a > span > img {
 	padding: 1px;
 	vertical-align: top;
 	/*moves image & text up*/
