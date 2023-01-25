@@ -103,7 +103,7 @@ body.drkmd .nvbartitle {}
 }
 
 div#pageBody {
-	height: 100vh;
+	height: 150vh;
 	background-color: #0077ee; /*background color*/
 	background-image: url(../images/backgrounds/background.png); /*background image*/
 	background-repeat: no-repeat;
