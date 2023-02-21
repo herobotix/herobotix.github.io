@@ -39,6 +39,13 @@ ready(function (){
 		pageBody.appendChild(page);
 	}
 	
+	pages.calendar = function() { /*calendar template*/
+		page = document.getElementsByClassName("calendar template")[0].cloneNode(true);
+		page.classList.remove("template");
+		pageBody.textContent = "";
+		pageBody.appendChild(page);
+	}
+	
 	function drkmdtoggle(event) {
 		document.body.classList.toggle("drkmd")
 	}
@@ -51,6 +58,7 @@ ready(function (){
 		else if (location.hash === "#videos") pages.videos();
 		else if (location.hash === "#teams") pages.teams();
 		else if (location.hash === "#donations") pages.donations();
+		else if (location.hash === "#calendar") pages.calendar();
 		else pages.homepage();
 	}
 	
