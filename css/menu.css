@@ -128,3 +128,16 @@ body.drkmd div#pageBody {
 	right: 3px;
 	top: 3px;
 }
+
+.webCalendar {
+	background-image: url(../images/loading.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 95vh;
+	height:75vh;
+	border:solid 2px #0044bb;
+	border-radius: 1.1vh;
+	width: 100vh;
+	height: 80vh;
+}
