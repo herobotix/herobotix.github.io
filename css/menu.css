@@ -104,7 +104,7 @@ body.drkmd .nvbartitle {}
 }
 
 div#pageBody {
-	height: 150vh;
+	height: 100vmax;
 	background-color: #0077ee; /*background color*/
 	background-image: url(../images/backgrounds/background.png); /*background image*/
 	background-repeat: no-repeat;
