@@ -1,7 +1,29 @@
 body {
 	margin: 0; /*outer border*/
-	color: #020202; /*border color*/;
+	color: #020202: /*border color*/;
+	font-family: Georgia, Arial, Sans-serif;
+	background-color: #0077ee; /*background color*/
+	background-image: url(../images/backgrounds/background.png); /*background image*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	transition: background-color 0.3s;
+	transition: background-image 0.3s;
 }
+
+.template {
+	display: none;
+}
+
+/* -~Header~- */
+
+.pageTop {
+	position: sticky;
+	top: 0px;
+	left: 50%;
+}
+
+/* Navbar Title */
 
 .nvbartitle {
 	text-transform: uppercase;
@@ -10,8 +32,6 @@ body {
 	color: #009fcf;
 	background-image: linear-gradient(#7f7f7f, #3b3b3b);
 }
-
-body.drkmd .nvbartitle {}
 
 .nvbartitle img {
 	max-width: 85%; /*max image width*/
@@ -26,9 +46,12 @@ body.drkmd .nvbartitle {}
 	opacity: 0.90;
 }
 
+/* Navbar Menu */
+
 .nvbar {
 	border-style: solid hidden;
 	border-color: #222277 #000000 #222255;
+	background-color: #333388; /*navbar color*/
 }
 
 .nvbar > ul {
@@ -36,9 +59,7 @@ body.drkmd .nvbartitle {}
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333388; /*navbar color*/
 	font-size: 1.2em; /*navbar font size*/
-	/*font-size: 2.5vw;*/ /*navbar font size*/
 }
 
 .nvbar > ul > span > li {
@@ -65,6 +86,8 @@ body.drkmd .nvbartitle {}
 	/*order= top right bottom left*/
 	background-color: #333388; /* right navbar button color*/
 	text-decoration: none;
+	transition: color 0.3s;
+	height: 100%;
 }
 
 .nvbar > ul > span > li > a {
@@ -72,72 +95,206 @@ body.drkmd .nvbartitle {}
 	color: #cfcfcf; /*left navbar text color*/
 	text-align: center;
 	padding: 8px; /*left navbar padding*/
-	/*largest navbar padding = navbar size*/
-	background-color: #333388; /*left navbar button color*/
+	/*largest navbar padding = navbar size
+	padding-bottom: 0; /*Height Correction*/
 	text-decoration: none;
+	transition: color 0.3s;
+	height: calc(1.0em + 12px);
 }
 
 .nvbar > ul li > a:hover {
 	background-color: #222288; /*selected navbar button color*/
+	transition: background-color 0.3s;
 }
 
-.nvbar > ul > li.selected {
+/*.nvbar > ul > li.selected {
 	display: block;
 	color: #cfcfcf;
 	text-align: center;
 	padding: 8px;
 	background-color: #111177;
+}*/
+
+/* Misc */
+
+div#pageBody {
+	height: 100vh;
+	margin-top: calc(calc(1.2em + 16px)*1.5);
 }
 
-.template {
+#drkmdbtnMenu.menu {
 	display: none;
 }
 
-.pageTop {
-	position: sticky;
-	top: 0px;
-	left: 50%;
+#drkmdbtnTitle.title {
+	width: 7vh;
+	height: 7vh;
+	position: fixed;
+	right: 3px;
+	top: 3px;
+	border: hidden;
+	display: block;
 }
 
-.ovrflw-Auto {
-	overflow: auto;
+.nvbar > div {
+	display: none;
 }
 
-div#pageBody {
-	height: 100vmax;
-	background-color: #0077ee; /*background color*/
-	background-image: url(../images/backgrounds/background.png); /*background image*/
+.nvbarimg {
+	display: none;
+}
+
+.homepageText {
+	font-family: Garamond, Georgia, Arial, Sans-serif;
+	font-size: 150%;
+	background: #222222;
+	background-image: url(../images/backgrounds/drkmd_background.png);
+	height: 100vh;
+	margin: 3vh;
+	padding: 0.4vh;
+	border-style: solid;
+	border-color: #222222;
+	border-width: 0.7vh;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	color: #00ffff;
+	text-shadow: 0px 0px 5px #0055ff;
+	transition: color 0.2s;
 	transition: background-color 0.3s;
 	transition: background-image 0.3s;
 }
 
-body.drkmd div#pageBody {
-	background-color: #222222; /*darkmode background color*/
-	background-image: url(../images/backgrounds/drkmd_background.png); /*darkmode background image*/
-	color: #dddddd;
+.nvbarimgright {
+	display: none;
 }
 
+ /* Darkmode */
+	
+	body.drkmd {
+		background-color: #222222; /*darkmode background color*/
+		background-image: url(../images/backgrounds/drkmd_background.png); /*darkmode background image*/
+		color: #dddddd;
+	}
+	
+	body.drkmd .nvbar {
+		border-color: #dd8800 #000000 #bb6600;
+		background-color: #ffcc00; /*navbar color*/
+	}
+	
+	body.drkmd .nvbar > ul li > a {
+	color: #994400;
+}
+	
+	body.drkmd .nvbar > ul li > a:hover {
+	background-color: #bb8800; /*selected navbar button color*/
+	color: #661100;
+}
+	
+	body.drkmd .homepageText {
+		background-color: #0077ee;
+		background-image: url(../images/backgrounds/drkmd_background_red.png);
+		/*color: #ffee00;*/
+		color: #000000;
+		text-shadow: 0 0 5px #000000;
+		border-color: #111111;
+		transition: border-color 0.3s;
+		transition: background-color 0.3s;
+		transition: background-image 0.3s;
+	}
+	
+	
+/*Breakpoint(Phone Mode)*/
 
-#drkmdbtn {
-	max-width: 100%; /*max image width*/
-	height: auto; /*image auto resizing*/
-	position: fixed;
-	right: 3px;
-	top: 3px;
+@media only screen and (max-width: 700px){
+	
+	.nvbartitle {
+		border-style:hidden hidden solid;
+		border-color: #222222;
+		margin-bottom: 0.35vh;
+	}
+	
+	.nvbar {
+		position: absolute;
+		display: inline-block;
+		overflow: hidden;
+		border-style: solid solid solid hidden;
+		border-color: #222277 #333355 #222255 #000000;
+		
+	}
+	
+	.nvbar > div img {
+		height: calc(1.0em + 16px);
+		display: block;
+		border-color: #222244 #222244 #111133 #111133;
+		border-style: solid;
+		border-width: 2px;
+		text-align: top;
+		text-align: left;
+	}
+	
+	.nvbarimg {
+		height: calc(1.2em + 16px);
+		display: block;
+		border-color: #222244 #222244 #111133 #111133;
+		border-style: solid;
+		border-width: 2px;
+		text-align: top;
+		text-align: left;
+	}
+	
+	.nvbarimgright {
+		height: calc(1.2em + 16px);
+		display: block;
+		border-color: #222244 #222244 #111133 #111133;
+		border-style: solid;
+		border-width: 2px;
+		text-align: top;
+		text-align: right;
+		float: right;
+		position: static;
+	}
+	
+	.nvbar:hover > div img {
+		display: none;
+	}
+	
+	.nvbar > div {
+		display: block;
+	}
+	
+	.nvbar ul li img.remdrpdwnimg {
+		display: none;
+	}
+	
+	.nvbar > ul > li > img {
+		height: calc(1.0em + 16px);
+		display: block;
+		border-color: #222244 #222244 #111133 #111133;
+		border-style: solid;
+		border-width: 2px;
+	}
+	
+	.nvbar:hover > div #drkmdbtnMenu.menu {
+		display: block;
+	}
+	
+	#drkmdbtnTitle.title {
+		display: none;
+	}
+	
+	.nvbar > ul {
+		display: none;
+		position: sticky;
+		text-align: left;
+		width: 19vh;
+		padding: 12px 16px;
+		z-index: 1;
+	}
+	
+	.nvbar:hover > ul {
+		display: block;
+	}
+	
 }
 
-.webCalendar {
-	background-image: url(../images/loading.png);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	width: 95vh;
-	height:75vh;
-	border:solid 2px #0044bb;
-	border-radius: 1.1vh;
-	width: 100vh;
-	height: 80vh;
-}

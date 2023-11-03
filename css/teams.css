@@ -70,3 +70,16 @@
 	height: auto;
 	/*image auto resizing*/
 }
+
+.webCalendar {
+	background-image: url(../images/loading.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 95vh;
+	height:75vh;
+	border:solid 2px #0044bb;
+	border-radius: 1.1vh;
+	width: 100vh;
+	height: 80vh;
+}
