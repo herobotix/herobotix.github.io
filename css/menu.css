@@ -195,8 +195,8 @@ div#pageBody {
 		background-color: #0077ee;
 		background-image: url(../images/backgrounds/drkmd_background_red.png);
 		/*color: #ffee00;*/
-		color: #000000;
-		text-shadow: 0 0 5px #000000;
+		color: #ffe300;
+		text-shadow: 0 0 0.5vw #ffe300;
 		border-color: #111111;
 		transition: border-color 0.3s;
 		transition: background-color 0.3s;
