@@ -32,13 +32,18 @@ ready(function (){
 		pageBody.textContent = "";
 		pageBody.appendChild(page);
 	}
-	pages.donations = function() { /*donations template*/
-		page = document.getElementsByClassName("donations template")[0].cloneNode(true);
+	pages.taxcredits = function() { /*taxcredits template*/
+		page = document.getElementsByClassName("taxcredits template")[0].cloneNode(true);
 		page.classList.remove("template");
 		pageBody.textContent = "";
 		pageBody.appendChild(page);
 	}
-	
+	pages.sponsorships = function() { /*sponsorships template*/
+		page = document.getElementsByClassName("sponsorships template")[0].cloneNode(true);
+		page.classList.remove("template");
+		pageBody.textContent = "";
+		pageBody.appendChild(page);
+	}
 	pages.calendar = function() { /*calendar template*/
 		page = document.getElementsByClassName("calendar template")[0].cloneNode(true);
 		page.classList.remove("template");
@@ -57,7 +62,8 @@ ready(function (){
 		else if (location.hash === "#about") pages.about();
 		else if (location.hash === "#videos") pages.videos();
 		else if (location.hash === "#teams") pages.teams();
-		else if (location.hash === "#donations") pages.donations();
+		else if (location.hash === "#taxcredits") pages.taxcredits();
+		else if (location.hash === "#sponsorships") pages.sponsorships();
 		else if (location.hash === "#calendar") pages.calendar();
 		else pages.homepage();
 	}

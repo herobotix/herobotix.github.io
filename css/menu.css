@@ -114,6 +114,12 @@ div#pageBody {
 	transition: background-image 0.3s;
 }
 
+div#pageBody a {
+	color: #FFFFFF; /*text color*/
+	text-shadow: 0.5px 0.5px 0.5px #0000AA; /*text color*/
+  
+}
+
 body.drkmd div#pageBody {
 	background-color: #222222; /*darkmode background color*/
 	background-image: url(../images/backgrounds/drkmd_background.png); /*darkmode background image*/
