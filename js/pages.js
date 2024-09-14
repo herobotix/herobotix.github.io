@@ -1,55 +1,8 @@
 ready(function (){
 	
-	pageBody = document.getElementById("pageBody");
+	main = document.getElementById("main");
+	pagesNames = ["home","about","videos","teams","calendar","sponsorships","taxcredits","volunteer"];
 	pages = {}
-	pages.homepage = function() { /*homepage template*/
-		page = document.getElementsByClassName("homepage template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.volunteer = function() { /*volunteer template*/
-		page = document.getElementsByClassName("volunteer template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.about = function() { /*about template*/
-		page = document.getElementsByClassName("about template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.videos = function() { /*videos template*/
-		page = document.getElementsByClassName("videos template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.teams = function() { /*teams template*/
-		page = document.getElementsByClassName("teams template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.taxcredits = function() { /*taxcredits template*/
-		page = document.getElementsByClassName("taxcredits template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.sponsorships = function() { /*sponsorships template*/
-		page = document.getElementsByClassName("sponsorships template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.calendar = function() { /*calendar template*/
-		page = document.getElementsByClassName("calendar template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
 	
 	function drkmdtoggle(event) {
 		document.body.classList.toggle("drkmd")
@@ -58,17 +11,14 @@ ready(function (){
 	document.getElementById("drkmdbtn").addEventListener("click", drkmdtoggle );
 		
 	function onRedir () {
-		if (location.hash === "#volunteer") pages.volunteer();
-		else if (location.hash === "#about") pages.about();
-		else if (location.hash === "#videos") pages.videos();
-		else if (location.hash === "#teams") pages.teams();
-		else if (location.hash === "#taxcredits") pages.taxcredits();
-		else if (location.hash === "#sponsorships") pages.sponsorships();
-		else if (location.hash === "#calendar") pages.calendar();
-		else pages.homepage();
+		let hash = location.hash.slice(1), page;
+		if (!pagesNames.includes(hash)) hash = "home";
+		page = document.getElementsByClassName(hash + " template")[0].cloneNode(true);
+		main.replaceChildren(...page.childNodes);
 	}
 	
 	window.onhashchange = onRedir;
 	
 	window.onhashchange();
+	
 });
