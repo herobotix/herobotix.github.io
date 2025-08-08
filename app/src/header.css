@@ -1,0 +1,88 @@
+.hoverLink:hover > ul, .hoverLink > ul:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: auto;
+}
+
+.hide {
+    transition: opacity 0.2s ease-in-out;
+    overflow: hidden;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+header {
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    display: flex;
+    img {
+        margin: 2%;
+        margin-left: 10%;
+        justify-items: flex-start;
+        height: 100px;
+    }
+    .links {
+        margin-left: auto;
+        margin-right: 2%;
+        display: flex;
+        flex-direction: row-reverse;
+        list-style: none;
+        min-width: max-content;
+        li {
+            font-size: 1.2em;
+            margin: auto 2% auto 0;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 3%;
+            border-top: 4px solid var(--white);
+            transition: border-top 0.5s ease;
+            .headLink {
+                text-decoration: none;
+                color: var(--blue);
+            }
+            ul {
+                position: absolute;
+                background-color: var(--white);
+                max-height: fit-content;
+                width: fit-content;
+                padding: 1%;
+                list-style: none;
+                overflow: hidden;
+                div {
+                    height: 4px;
+                    margin-left: -50%;
+                    margin-bottom: 8%;
+                    width: 200%;
+                    background-color: var(--blue);
+                    padding-left: 5%;
+                    padding-right: 5%;
+                }
+                li:first-of-type {
+                    border: none;
+                }
+                li {
+                    margin-top: 10%;
+                    width: 100%;
+                    text-wrap: nowrap;
+                    border-top: 1px solid lightgray;
+                }
+                li:hover {
+                    border-top: 1px solid lightgray;
+                }
+                li:first-of-type:hover {
+                    border: none;
+                }
+                a {
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        li:hover {
+            border-top: 4px solid var(--blue);
+        }
+    }
+}

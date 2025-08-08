@@ -1,0 +1,112 @@
+@import url("./effects.css");
+main {
+    
+}
+
+.about {
+    section {
+        background-color: var(--grey);
+        display: flex;
+        padding: 1%;
+
+        div {
+            padding-left: 2%;
+            padding-right: 2%;
+            h1 {
+                color: var(--red);
+                font-size: 2em;
+                margin-bottom: 2%;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+.teams {
+    background-color: var(--lightBlue);
+    padding: 2%;
+    h1 {
+        color: var(--white);
+        font-size: 2em;
+        padding-bottom: 2%;
+        text-align: center;
+    }
+    div {
+        color: var(--white);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .teamSection {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            color: var(--white);
+            img {
+                width: 400px;
+                margin: auto;
+                margin-bottom: 2%;
+            }
+            h2 {
+                text-align: center;
+                font-size: 2.5em;
+            }
+            p {
+                margin-top: 1%;
+                text-align: center;
+                width: 400px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.sponsors {
+    min-height: 400px;
+    background: url("https://placehold.co/2000x2000") center center no-repeat;
+    display: flex;
+    align-items: center;
+    section {
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(37, 74, 138, 0.74);
+        margin-left: 5%;
+        margin-right: 5%;
+        div {
+            margin-left: 5%;
+            min-height: 300px;
+            min-width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                color: white;
+                font-size: 3em;
+                margin-bottom: 2%;
+            }
+            .button {
+                margin-top: 2%;
+                border: 2px solid rgb(240, 69, 49);
+                background-color: rgba(240, 69, 49, 1);
+                font-size: 2em;
+                color: white;
+                border-radius: 10px;
+                padding: 2%;
+                transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+                text-decoration: none;
+            }
+            .button:hover {
+                background-color: rgba(240, 69, 49, 0.00);
+                border: 2px solid white;
+            }
+        }
+        p {
+            color: white;
+            font-size: 1.4em;
+        }
+    }
+}

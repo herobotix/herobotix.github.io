@@ -1,0 +1,24 @@
+.fade-in {
+    opacity: 0;
+    transform: translateX(50px); /* default direction: right */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0) !important;
+}
+
+/* Direction modifiers */
+.fade-in.left {
+    transform: translateX(-50px);
+}
+.fade-in.right {
+    transform: translateX(50px);
+}
+.fade-in.up {
+    transform: translateY(50px);
+}
+.fade-in.down {
+    transform: translateY(-50px);
+}

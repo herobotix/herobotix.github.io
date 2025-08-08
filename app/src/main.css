@@ -1,0 +1,17 @@
+:root {
+    --white: #FFFFFF;
+    --blue: #1A4796;
+    --red: #ED1E27;
+    --grey: #F4F4F4;
+    --lightBlue: #5E7DB5;
+}
+
+* {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
