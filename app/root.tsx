@@ -10,9 +10,10 @@ import "./src/effects.css";
 import "./src/home.css";
 import "./src/main.css";
 import "./src/header.css";
-import {Header} from "~/src/header";
+import {Header, MobileHeader} from "~/src/header";
 
 import type { Route } from "./+types/root";
+import {windowWidth} from "~/src/effects";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,11 +24,12 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "icon",
-    href: "/favicon.ico"
+    href: "public/favicon.ico"
   }
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const width = windowWidth();
   return (
     <html lang="en">
       <head>
@@ -38,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Header />
+        {width > 360 ? <Header /> : <MobileHeader />}
         {children}
         <ScrollRestoration />
         <Scripts />

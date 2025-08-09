@@ -110,3 +110,89 @@ main {
         }
     }
 }
+
+@media screen and (max-width: 361px) {
+    body {
+        overflow-x: hidden;
+    }
+    .about {
+        width: 100vw;
+        section {
+            flex-direction: column;
+            img {
+            }
+            h1 {
+                text-align: center;
+                margin-top: 2%;
+            }
+        }
+    }
+    .teams {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        section {
+            margin: 0;
+            padding: 0;
+            h1 {
+                font-weight: bolder;
+                font-size: 3em;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            div {
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                .teamSection {
+                    margin-bottom: 3%;
+                    img {
+                        width: 85%;
+                        margin: auto;
+                        margin-top: 5%;
+                        padding: 0;
+                    }
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .sponsors {
+        min-height: 0;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        section {
+            height: 100%;
+            min-height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            align-items: start;
+            flex-direction: column;
+            div {
+                min-height: 100%;
+                min-width: 0;
+                width: 100%;
+                height: fit-content;
+                padding: 0;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                margin-left: 0;
+                h1 {
+                    text-align: center;
+                    margin: auto;
+                }
+                .button {
+                }
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+}
