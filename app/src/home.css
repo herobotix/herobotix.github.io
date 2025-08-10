@@ -88,6 +88,9 @@ main {
                 font-size: 3em;
                 margin-bottom: 2%;
             }
+            .mobileTag {
+                display: none;
+            }
             .button {
                 margin-top: 2%;
                 border: 2px solid rgb(240, 69, 49);
@@ -111,7 +114,7 @@ main {
     }
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 450px) {
     body {
         overflow-x: hidden;
     }
@@ -125,6 +128,9 @@ main {
                 text-align: center;
                 margin-top: 2%;
             }
+            p {
+            }
+            margin-bottom: 1%;
         }
     }
     .teams {
@@ -186,6 +192,11 @@ main {
                 h1 {
                     text-align: center;
                     margin: auto;
+                }
+                .mobileTag {
+                    display: block;
+                    margin: 2%;
+                    font-size: 1.3em;
                 }
                 .button {
                 }

@@ -49,8 +49,14 @@ export const links: Route.LinksFunction = () => [
     crossOrigin: "anonymous",
   },
 ];
+async function getNewsletters() {
+    const response = await fetch("https://us-central1-herobotix-email-service.cloudfunctions.net/getNewsletters");
+    const data = await response.json();
+    console.log(data);
+}
 
 export default function Home() {
+    getNewsletters();
   return (
       <main>
         <About/>
@@ -108,7 +114,8 @@ function Sponsor({direction = "left"} : {direction?: Direction}) {
             <section ref={ref} className={`fade-in ${direction} ${isVisible ? "visible" : ""}`}>
                 <div>
                     <h1>Support Us</h1>
-                    <Link to={"/sponsor"} className={"button"}>Learn More</Link>
+                    <p className={"mobileTag"}>We can't Do this without Support</p>
+                    <Link to={"/donate"} className={"button"}>Learn More</Link>
                 </div>
                 <p>{sponsorMessage}</p>
             </section>

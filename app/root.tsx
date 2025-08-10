@@ -24,7 +24,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "icon",
-    href: "public/favicon.ico"
+    href: "/images/favicon.ico"
   }
 ];
 
@@ -40,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {width > 360 ? <Header /> : <MobileHeader />}
+        {width > 450 ? <Header /> : <MobileHeader />}
         {children}
         <ScrollRestoration />
         <Scripts />

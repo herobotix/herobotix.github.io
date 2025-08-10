@@ -74,11 +74,11 @@ header {
                 li:first-of-type:hover {
                     border: none;
                 }
-                a {
+                .nestLink {
                     font-size: 1.2rem;
                     text-decoration: none;
                     color: black;
-                }
+                }   
             }
         }
         li:hover {
@@ -87,7 +87,7 @@ header {
     }
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 450px) {
     .hide {
         display: block;
     }

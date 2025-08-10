@@ -1,0 +1,54 @@
+html {
+    overflow-y: hidden;
+}
+.adminLogin {
+    background-color: var(--grey);
+    height: 100vh;
+    padding-top: 5%;
+}
+
+form {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    div {
+        width: 80%;
+        margin: auto;
+        margin-top: 1%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        label {
+            width: 100px;
+            text-align: right;
+            font-size: 1.2em;
+        }
+        input {
+            height: 30px;
+            width: 50%;
+        }
+    }
+    button {
+        transition: border 0.2s ease-in-out, background 0.2s ease-in-out;
+        border: 2px solid var(--red);
+        background: var(--red);
+        height: 40px;
+        width: 80%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    button:hover {
+        background: none;
+        border: 2px solid var(--white);
+    }
+}

@@ -13,18 +13,18 @@ export function Header() {
                     <Link to="/donate" className="headLink">Donate</Link>
                     <ul className="hide">
                         <div className="spacer"></div>
-                        <li>Sponsor Us</li>
-                        <li>Tax Credits</li>
-                        <li>Volunteer</li>
+                        <li><Link to={"/donate/sponsor"} className={"nestLink"}>Sponsor Us</Link></li>
+                        <li><Link to={"/donate/credit"} className={"nestLink"}>Tax Credits</Link></li>
+                        <li><Link to={"/donate/volunteer"} className={"nestLink"}>Volunteer</Link></li>
                     </ul>
                 </li>
                 <li className="hoverLink">
                     <Link to="/teams" className="headLink">Teams</Link>
                     <ul className="hide">
                         <div className="spacer"></div>
-                        <li><a href="https://cis.herobotix.com">C.I.S.</a></li>
-                        <li><a href="https://beaniebots.herobotix.com">Beanie Bots</a></li>
-                        <li><a href="https://spartech.herobotix.com">Spar-Tech</a></li>
+                        <li><a href="https://cis.herobotix.com" className={"nestLink"}>C.I.S.</a></li>
+                        <li><a href="https://beaniebots.herobotix.com" className={"nestLink"}>Beanie Bots</a></li>
+                        <li><a href="https://spartech.herobotix.com" className={"nestLink"}>Spar-Tech</a></li>
                     </ul>
                 </li>
             </ul>
@@ -46,9 +46,9 @@ export function MobileHeader() {
     }
     return (
         <header>
-            <img src={"public/images/mobile-heritage.png"} alt="Heritage Academy Logo" />
+            <img src={"/images/mobile-heritage.png"} alt="Heritage Academy Logo" />
             <svg onClick={toggleMenu} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
-            <section className={`mobileLinks ${menuState ? "" : "hide"}`}>
+            <section onClick={toggleMenu} className={`mobileLinks ${menuState ? "" : "hide"}`}>
                 <ul className={`links ${menuState ? "" : "hide"}`}>
                     <svg onClick={toggleMenu} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
                     <li><NavLink onClick={toggleMenu} to="/" className={({ isActive }) => isActive ? "activeLink headLink" : "headLink"}>Home</NavLink></li>
