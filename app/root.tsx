@@ -27,6 +27,12 @@ export const links: Route.LinksFunction = () => [
     href: "/images/favicon.ico"
   }
 ];
+export function meta({}: Route.MetaArgs) {
+  return [
+    { name: "description", content: "Welcome to HEROBOTIX, Heritage Academey Gateway's robotics club. Explore information about teams, sponsors, and upcoming events" },
+    { property: "og:image", content: "/public/images/mobile-heritage.png"},
+  ];
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const width = windowWidth();

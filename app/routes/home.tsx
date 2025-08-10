@@ -3,41 +3,22 @@ import {Link} from "react-router";
 import {useFadeIn, domLoaded} from "~/src/effects";
 import type { Direction } from "~/src/effects"
 
+import { teams } from "../src/data.json"
 const aboutParagraph = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. Duis sapien ipsum, lacinia eget imperdiet at, posuere et lectus. Quisque maximus augue a lacus maximus consectetur. Quisque scelerisque efficitur tellus quis dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed placerat urna ut arcu pellentesque feugiat. Duis vel mattis felis. Nulla ullamcorper vitae purus vel varius. Mauris vel semper nibh. Nam dictum, turpis et iaculis rutrum, enim nibh laoreet ante, et mattis dui sem vitae mi. Cras dictum nisl ac sem viverra, sit amet bibendum nunc lacinia. Aenean suscipit arcu non elit lobortis, a maximus nisi dignissim. Ut sollicitudin rhoncus velit, eu laoreet velit tempor id. Integer dapibus, lorem at rhoncus efficitur, nisi ex volutpat nisi, vitae porta lorem ligula at nisi. Praesent finibus velit in libero tincidunt blandit nec in turpis.`;
 const sponsorMessage = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. Duis sapien ipsum, lacinia eget imperdiet at, posuere et lectus.";
-const teams = [
-  {
-    name: "C.I.S",
-    link: "https://cis.herobotix.com/",
-    image: "https://placehold.co/400x400",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. "
-  },
-  {
-    name: "Beanie Bots",
-    link: "https://beaniebots.herobotix.com/",
-    image: "https://placehold.co/400x400",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. "
-  },
-  {
-    name: "Spar-Tech",
-    link: "https://spartech.herobotix.com/",
-    image: "https://placehold.co/400x400",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. "
-  },  
-]
 
 type TeamProps = {
   team: {
     name: string;
     link: string;
     image: string;
-    description: string;
+    descriptionShort: string;
+    descriptionLong: string;
   };
 };
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Home | Herobotix  " },
-    { name: "description", content: "Welcome to React Router!" },
   ];
 }
 
@@ -49,14 +30,8 @@ export const links: Route.LinksFunction = () => [
     crossOrigin: "anonymous",
   },
 ];
-async function getNewsletters() {
-    const response = await fetch("https://us-central1-herobotix-email-service.cloudfunctions.net/getNewsletters");
-    const data = await response.json();
-    console.log(data);
-}
 
 export default function Home() {
-    getNewsletters();
   return (
       <main>
         <About/>
@@ -102,7 +77,7 @@ function Team({ team }: TeamProps) {
       <Link to={team.link} className="teamSection">
         <img src={team.image} alt="{team.name} logo" />
         <h2>{team.name}</h2>
-        <p>{team.description}</p>
+        <p>{team.descriptionShort}</p>
       </Link>
   )
 }

@@ -1,0 +1,81 @@
+.intro {
+    background: var(--grey);
+    padding: 1%;
+    h1 {
+        text-align: center;
+        color: var(--red);
+    }
+    p {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 0.5%;
+        font-size: 1.1rem;
+    }
+}
+
+.teamBio {
+    padding: 1%;
+    background-color : var(--lightBlue);
+    section {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        height: 100%;
+        div {
+                padding-left: 1%;
+                padding-right: 1%;
+                height: 100%;
+                h2 {
+                    font-size: 3em;
+                    color: white;
+                    border-bottom: 2px solid var(--white);
+                }
+                p {
+                    color: white;
+                    padding-top: 1%;
+                    margin-bottom: 3%;
+                }
+            .teamLink {
+                background: var(--red);
+                border: 2px solid var(--red);
+                border-radius: 10px;
+                padding: 1%;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: all 0.2s ease-in-out;
+            }
+            .teamLink:hover {
+                background: none;
+                border: 2px solid var(--white);
+            }
+        }
+    }
+}
+
+.teamBio:nth-of-type(odd) {
+    background-color: var(--grey);
+    section {
+        flex-direction: row;
+
+        div {
+            h2 {
+                color: var(--red);
+                border-bottom-color: #000;
+            }
+            p {
+                color: black;
+            }
+            .teamLink {
+                transition: all 0.2s ease-in-out;
+                background-color: var(--lightBlue);
+                border: 2px solid var(--lightBlue);
+            }
+            .teamLink:hover {
+                background: none;
+                border: 2px solid black;
+                color: black;
+            }
+        }
+    }
+}

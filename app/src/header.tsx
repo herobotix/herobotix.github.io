@@ -15,7 +15,6 @@ export function Header() {
                         <div className="spacer"></div>
                         <li><Link to={"/donate/sponsor"} className={"nestLink"}>Sponsor Us</Link></li>
                         <li><Link to={"/donate/credit"} className={"nestLink"}>Tax Credits</Link></li>
-                        <li><Link to={"/donate/volunteer"} className={"nestLink"}>Volunteer</Link></li>
                     </ul>
                 </li>
                 <li className="hoverLink">
