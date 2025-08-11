@@ -7,13 +7,13 @@ import {
   ScrollRestoration,
 } from "react-router";
 import "./src/effects.css";
-import "./src/home.css";
+//import "./src/home.css";
 import "./src/main.css";
 import "./src/header.css";
 import {Header, MobileHeader} from "~/src/header";
 
 import type { Route } from "./+types/root";
-import {windowWidth} from "~/src/effects";
+import {useWindowSize} from "~/src/effects";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -35,7 +35,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const width = windowWidth();
+  const width = useWindowSize();
   return (
     <html lang="en">
       <head>

@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import {Link} from "react-router";
 import {useFadeIn, domLoaded} from "~/src/effects";
 import type { Direction } from "~/src/effects"
+import "app/src/home.css"
 
 import { teams } from "../src/data.json"
 const aboutParagraph = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. Duis sapien ipsum, lacinia eget imperdiet at, posuere et lectus. Quisque maximus augue a lacus maximus consectetur. Quisque scelerisque efficitur tellus quis dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed placerat urna ut arcu pellentesque feugiat. Duis vel mattis felis. Nulla ullamcorper vitae purus vel varius. Mauris vel semper nibh. Nam dictum, turpis et iaculis rutrum, enim nibh laoreet ante, et mattis dui sem vitae mi. Cras dictum nisl ac sem viverra, sit amet bibendum nunc lacinia. Aenean suscipit arcu non elit lobortis, a maximus nisi dignissim. Ut sollicitudin rhoncus velit, eu laoreet velit tempor id. Integer dapibus, lorem at rhoncus efficitur, nisi ex volutpat nisi, vitae porta lorem ligula at nisi. Praesent finibus velit in libero tincidunt blandit nec in turpis.`;

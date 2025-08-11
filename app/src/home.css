@@ -2,7 +2,9 @@
 main {
     
 }
-
+html {
+    overflow-y: scroll;
+}
 .about {
     section {
         background-color: var(--grey);

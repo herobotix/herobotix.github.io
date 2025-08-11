@@ -1,3 +1,4 @@
+
 html {
     overflow-y: hidden;
 }
@@ -46,9 +47,33 @@ form {
         font-size: 1.4em;
         font-weight: bold;
         border-radius: 10px;
+        cursor: pointer;
     }
     button:hover {
         background: none;
         border: 2px solid var(--white);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    form {
+        padding: 5%;
+        div {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            label {
+                text-align: center;
+            }
+            input {
+                width: 100%;
+                margin-bottom: 1%;
+            }
+        }
+        button {
+            margin: auto;
+            margin-top: 5%;
+        }
     }
 }

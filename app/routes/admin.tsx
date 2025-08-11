@@ -3,6 +3,7 @@ import { auth } from "~/src/firebase";
 import {getFunctions, httpsCallable} from "@firebase/functions";
 import {useEffect, useState} from "react";
 import "~/src/admin.css";
+import {useWindowSize} from "~/src/effects";
 export default function Admin() {
     const [token, setToken] = useState<string | null>(null);
     const [loggedIn, setLoggedIn] = useState(false);
@@ -47,18 +48,18 @@ export default function Admin() {
             setError("Incorrect Email or Password");
         }
     }
-
+    
+    const width = useWindowSize();
     return (
         <>
             {loggedIn ? (
                 <div>
                     <h2>Welcome, Admin!</h2>
-                    {/* Put your admin page content here */}
                 </div>
             ) : (
                 <main className="adminLogin">
                 <form onSubmit={loginCheck} className="login">
-                    <h1>Welcome, Admin</h1>
+                    <h1>Welcome Admin</h1>
                     <div>
                         <label htmlFor="email">Email</label>
                         <input id="email" type="email" name="email" required />
