@@ -11,8 +11,12 @@
   "dependencies": {
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "@tiptap/extension-text-style": "^3.1.0",
+    "@tiptap/react": "^3.1.0",
+    "@tiptap/starter-kit": "^3.1.0",
     "firebase": "^12.1.0",
     "isbot": "^5.1.27",
+    "juice": "^11.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-dotenv": "^0.1.3",

@@ -6,11 +6,13 @@
 
 [ ] sponsor page
 
-[x] donate page
+[x] -  donate page
+
+[ ] - tax credit info look better
 
 [x] sponsor us page with zeffy
 
-[ ] tax credit info page
+[x] tax credit info page
 
 [ ] calendar page
 

@@ -1,0 +1,82 @@
+/* Basic editor styles */
+.button-group {
+    button {
+        border: none;
+        background: var(--grey);
+        margin: 0.2%;
+        padding: 0.2%;
+        cursor: pointer;
+        border-radius: 0.2rem;
+        font-size: 1em;
+        transition: background 0.2s ease-in-out;
+    }
+    button:hover {
+        background: rgb(179, 179, 179);
+    }
+    .is-active {
+        background: var(--lightBlue);
+        color: white;
+    }
+    .is-active:hover {
+        background: rgb(61, 81, 116);
+    }
+    button[disabled] {
+        cursor: default;
+        background-color: var(--grey);
+    }
+}
+
+.tiptap * {
+    font-family: sans-serif;
+}
+.tiptap:first-child {
+    margin-top: 0;
+}
+
+.tiptap ul, .tiptap ol {
+    padding: 0 1rem;
+    margin: 1.25rem 1rem 1.25rem 0.4rem;
+}
+
+.tiptap ol li p, .tiptap ul li p {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+.tiptap h1, .tiptap h2, .tiptap h3, .tiptap h4, .tiptap h5, .tiptap h6 {
+    line-height: 1.1;
+    margin-top: 2.5rem;
+    text-wrap: pretty;
+}
+.tiptap h1, .tiptap h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tiptap h1 {
+    font-size: 2rem;
+}
+.tiptap h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #EC252BFF;
+    
+}
+.tiptap h3 {
+    font-size: 1.1rem;
+    color: #5E7DB5FF;
+}
+
+.tiptap h4, .tiptap h5, .tiptap h6 {
+    font-size: 1rem;
+}
+.tiptap blockquote {
+    border-left: 3px solid rgb(150, 150, 150);
+    margin: 1.5rem 0;
+    padding-left: 1rem; 
+}
+
+.tiptap hr {
+    border: none;
+    border-top: 1px solid rgb(200, 200, 200);
+    margin: 2rem 0;
+}

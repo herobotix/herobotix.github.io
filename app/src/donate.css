@@ -32,11 +32,29 @@ iframe {
         padding-top: 1.5%;
     }
     div {
-        margin: 1%;
+        margin: 0;
         text-wrap: wrap;
         .intro {
             font-size: 1.2em;
             text-align: center;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        padding: 2%;
+        hr {
+            margin-top: 1%;
+            margin-bottom: 1%;
+            color: rgb(200, 200, 200);
+        }
+    }
+    .info {
+        background-color: var(--lightBlue);
+        margin: 0;
+        color: white;
+        padding: 2%;
+        h3 {
+            font-size: 2em;
         }
     }
 }

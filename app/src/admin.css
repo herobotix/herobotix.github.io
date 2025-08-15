@@ -1,7 +1,4 @@
 
-html {
-    overflow-y: hidden;
-}
 .adminLogin {
     background-color: var(--grey);
     height: 100vh;
@@ -54,6 +51,112 @@ form {
         border: 2px solid var(--white);
     }
 }
+.editorContent {
+    width: 90%;
+    margin: auto;
+    padding-top: 3%;
+    padding: 1%;
+    background-color: var(--white);
+    min-height: 70vh;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    .control-group {
+        border-bottom: 1px solid rgb(200, 200, 200);
+        padding-bottom: 0.5%;
+    }
+    .tiptap {
+        padding-top: 2%;
+    }
+}
+.titleSection {
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+    background: white;
+    border-top-right-radius: 1.5em;
+    border-top-left-radius: 1.5em;
+    margin-top: 1%;
+}
+main {
+    background-color: var(--grey);
+    padding-top: 2%;
+    input {
+        background-color: var(--grey);
+        border: none;
+        padding: 0.5%;
+    }
+}
+.send {
+    background-color: var(--lightBlue);
+    width: 20%;
+    padding: 1%;
+    border: none;
+    border-radius: 1em;
+    margin-left: 4%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    z-index: 10;
+}
+.send:hover {
+    background-color: #39527d;
+}
+.confirm {
+    width: 20%;
+    transition: width 0.2s ease-in-out, padding 0.2s ease-in-out;
+    overflow: hidden;
+    padding: 1%;
+    margin: 0;
+    margin-left: 1%;
+    border: none;
+    background-color: var(--red);
+    border-radius: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+}
+.hide {
+    padding: 0;
+    width: 0;
+}
+
+.addSub {
+    width: 100%;
+    background-color: var(--lightBlue);
+    display: block;
+    padding: 2%;
+    height: fit-content;
+    label {
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    input {
+        background-color: var(--grey);
+    }
+    button {
+        width: 20%;
+        margin-left: 1%;
+    }
+    .error {
+        display: inline;
+        margin-left: 2%;
+        opacity: 1;
+        transition: opacity 3s ease-in-out;
+        font-size: 1.3em;
+    }
+    .fade-out {
+        opacity: 0;
+    }
+}
+
 
 @media screen and (max-width: 450px) {
     form {
