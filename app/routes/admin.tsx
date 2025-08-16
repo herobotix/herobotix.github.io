@@ -116,6 +116,7 @@ function AdminContent() {
         fetch("https://sendnewsletter-pkgqxun4ba-uc.a.run.app", options);
 /*        document.body.removeChild(a)
         URL.revokeObjectURL(url)*/
+        setConfirm(false)
     }
     const [ confirm, setConfirm ] = useState(false);
     function confirmSend() {

@@ -5,4 +5,6 @@ export default [
     route("teams", "routes/teams.tsx"),
     route("donate", "routes/donate.tsx"),
     route("admin", "routes/admin.tsx"),
+    route("newsletter", "routes/newsletter.tsx"),
+    route("calendar", "routes/calendar.tsx"),
 ] satisfies RouteConfig;

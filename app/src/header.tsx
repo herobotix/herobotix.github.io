@@ -7,7 +7,7 @@ export function Header() {
             <Link to="/"><img src="/images/heritage-logo.png" alt="Heritage Academy Logo" /></Link>
             <ul className="links">
                 <li><Link to="/newsletter" className="headLink">Newsletter</Link></li>
-                <li><Link to="/calender" className="headLink">Calender</Link></li>
+                <li><Link to="/calendar" className="headLink">Calendar</Link></li>
                 <li><Link to="/sponsors" className="headLink">Sponsors</Link></li>
                 <li className="hoverLink">
                     <Link to="/donate" className="headLink">Donate</Link>
@@ -49,7 +49,7 @@ export function MobileHeader() {
                     <li><NavLink onClick={toggleMenu} to="/teams" className={({ isActive }) => isActive ? "activeLink headLink" : "headLink"}>Teams</NavLink></li>
                     <li><NavLink onClick={toggleMenu} to="/donate" className={({ isActive }) => isActive ? "activeLink headLink" : "headLink"}>Donate</NavLink></li>
                     <li><NavLink onClick={toggleMenu} to="/sponsors" className={({ isActive }) => isActive ? "activeLink headLink" : "headLink"}>Sponsors</NavLink></li>
-                    <li><NavLink onClick={toggleMenu} to="/calender" className={({ isActive }) => isActive ? "activeLink headLink" : "headLink"}>Calender</NavLink></li>
+                    <li><NavLink onClick={toggleMenu} to="/calendar" className={({ isActive }) => isActive ? "activeLink headLink" : "headLink"}>Calendar</NavLink></li>
                     <li><NavLink onClick={toggleMenu} to="/newsletter" className={({ isActive }) => isActive ? "activeLink headLink" : "headLink"}>Newsletter</NavLink></li>
                 </ul>
             </section>

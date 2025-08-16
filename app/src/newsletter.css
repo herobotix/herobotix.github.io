@@ -1,0 +1,45 @@
+article {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 1%;
+
+    .title {
+        border-bottom: 2px solid #c8c8c8
+    }
+}
+.newsLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    .link {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em;
+        background-color: var(--lightBlue);
+        padding: 0.5%;
+        border-radius: 10px;
+        margin-top: 1%;
+        min-width: 10%;
+        text-align: center;
+    }
+    .link:hover {
+        background-color: #39527d;
+    }
+}
+main {
+    background-color: var(--grey);
+    min-height: 85vh;
+    padding-top: 1%;
+}
+
+@media screen and (max-width: 450px) {
+    .newsLinks {
+        margin-top: 5%;
+        .link {
+            padding: 2%;
+            min-width: 25%;
+        }
+    }
+}
