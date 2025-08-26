@@ -3,21 +3,21 @@
     {
       "name": "C.I.S.",
       "link": "https://cis.herobotix.com/",
-      "image": "https://placehold.co/400x400",
+      "image": "/images/cis_logo.png",
       "descriptionShort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. ",
       "descriptionLong": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
     },
     {
       "name": "Beanie Bots",
       "link": "https://beaniebots.herobotix.com/",
-      "image": "https://placehold.co/400x400",
+      "image": "/images/beaniebots_logo.png",
       "descriptionShort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. ",
       "descriptionLong": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
     },
     {
       "name": "Spar-Tech",
       "link": "https://spartech.herobotix.com/",
-      "image": "https://placehold.co/400x400",
+      "image": "/images/spartech_logo.png",
       "descriptionShort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. ",
       "descriptionLong": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
     }

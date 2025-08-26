@@ -1,29 +1,47 @@
 # TODO
 
+## FOR STUDENTS
+
+### Writing
+- [ ] About us
+- [ ] Support us
+- [ ] Team Small description x 3
+- [ ] Team Large description x 3
+- [ ] About our teams
+- [ ] why you should Donate
+- [ ] We love our sponsors
+- [ ] site description (one for each page if someone wants to)
+- 
+### Art 
+- [ ] Sponsorship tiers
+- [ ] Up-to-date Logos
+
 ## Frontend
 
 ### MOBILE FOR ALL 
 
-[ ] sponsor page
+- [ ] loading modal thingy
+
+[x] sponsor page
 
 [x] -  donate page
 
-[ ] - tax credit info look better
+[x] - tax credit info look better
 
 [x] sponsor us page with zeffy
 
 [x] tax credit info page
 
-[ ] calendar page
+[x] calendar page
 
-[ ] newsletter page - display current, links to all old - store in localstorage for easy retrieval?
+[x] newsletter page - display current, links to all old - store in localstorage for easy retrieval?
 
 ### Admin stuff
-[ ] easily create newsletters
+[x] easily create newsletters
 
-[ ] add sponsors 
+[x] add sponsors 
 
-[ ] add subscribers
+[x] add subscribers
 
 ## Backend
-[ ] add/store sponsors with tier
+[x] add/store sponsors with tier

@@ -21,6 +21,7 @@ iframe {
 }
 
 .taxCredit {
+    padding-top: 2%;
     margin-top: -1%;
     padding-bottom: 1%;
     background-color: var(--grey);
@@ -29,7 +30,7 @@ iframe {
         font-size: 2em;
         text-align: center;
         padding-bottom: 1%;
-        padding-top: 1.5%;
+        padding-top: 1%;
     }
     div {
         margin: 0;
@@ -50,11 +51,36 @@ iframe {
     }
     .info {
         background-color: var(--lightBlue);
-        margin: 0;
+        margin: 1%;
         color: white;
         padding: 2%;
+        border-radius: 10px;
         h3 {
             font-size: 2em;
         }
     }
+}
+
+.about-donate {
+    section{
+        width: 80%;
+        margin: auto;
+        padding: 1%;
+        padding-bottom: 1.5%;
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            margin-bottom: 1%;
+        }
+        p {
+            background-color: var(--grey);
+            padding: 2%;
+            border-radius: 10px;
+            text-align: center;
+            color: black;
+            font-size: 1.3em;
+        }  
+    }
+    background-color: var(--lightBlue);
 }

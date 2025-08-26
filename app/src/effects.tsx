@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 export type Direction = "right"|"left"|"up"|"down";
 export function useFadeIn(direction: Direction = "right") {
-    const ref = useRef<HTMLElement | null>(null);
+    const ref = useRef<HTMLElement | HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
     
     useEffect(() => {

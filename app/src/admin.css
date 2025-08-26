@@ -125,7 +125,7 @@ main {
     width: 0;
 }
 
-.addSub {
+.addSub,  .addSponsor {
     width: 100%;
     background-color: var(--lightBlue);
     display: block;
@@ -157,6 +157,13 @@ main {
     }
 }
 
+.addSponsor {
+    background-color: var(--grey);
+    input {
+        background-color: white;
+        border: rgb(200, 200, 200) 1px solid;
+    }
+}
 
 @media screen and (max-width: 450px) {
     form {

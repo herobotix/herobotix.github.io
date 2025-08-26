@@ -21,6 +21,12 @@
         flex-direction: row-reverse;
         justify-content: flex-end;
         height: 100%;
+        .image {
+            img {
+                width: 400px;
+                height: 400px;
+            }
+        }
         div {
                 padding-left: 1%;
                 padding-right: 1%;

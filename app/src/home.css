@@ -10,13 +10,16 @@ html {
         background-color: var(--grey);
         display: flex;
         padding: 1%;
-
+        img {
+            width: 600px;
+            
+        }
         div {
             padding-left: 2%;
             padding-right: 2%;
             h1 {
                 color: var(--red);
-                font-size: 2em;
+                font-size: 2.7em;
                 margin-bottom: 2%;
             }
 
@@ -32,7 +35,7 @@ html {
     padding: 2%;
     h1 {
         color: var(--white);
-        font-size: 2em;
+        font-size: 3em;
         padding-bottom: 2%;
         text-align: center;
     }
@@ -66,7 +69,7 @@ html {
 
 .sponsors {
     min-height: 400px;
-    background: url("https://placehold.co/2000x2000") center center no-repeat;
+    background: url("/images/IMG20241205170438.jpg") center center no-repeat;
     display: flex;
     align-items: center;
     section {

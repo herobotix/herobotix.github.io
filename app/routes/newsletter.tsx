@@ -3,6 +3,11 @@ import {Link, useSearchParams} from "react-router";
 import {useEffect, useState} from "react";
 import "../src/newsletter.css";
 
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Newsletter | Herobotix" },
+    ];
+}
 export default function Newsletter() {
     const [searchParams] = useSearchParams();
     const number = searchParams.get("id") || "0";

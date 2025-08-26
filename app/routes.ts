@@ -7,4 +7,5 @@ export default [
     route("admin", "routes/admin.tsx"),
     route("newsletter", "routes/newsletter.tsx"),
     route("calendar", "routes/calendar.tsx"),
+    route("sponsors", "routes/sponsors.tsx"),
 ] satisfies RouteConfig;

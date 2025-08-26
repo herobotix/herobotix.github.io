@@ -47,7 +47,7 @@ function About() {
   return (
     <section className={"about"}>
         <section ref={ref} className={"fade-in right"}>
-            <img src="https://placehold.co/600x400" alt="Robtics Students" />
+            <img src="/images/IMG_9211.JPG" alt="Robtics Students" />
             <div>
                 <h1>About Us</h1>
                 <p>{aboutParagraph}</p>

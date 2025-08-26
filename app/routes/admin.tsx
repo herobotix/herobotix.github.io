@@ -10,6 +10,13 @@ import { EditorContent, useEditor, useEditorState } from '@tiptap/react'
 import juice from "juice"
 
 import StarterKit from '@tiptap/starter-kit'
+import type {Route} from "../../.react-router/types/app/routes/+types/home";
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Admin | Herobotix" },
+    ];
+}
 export default function Admin() {
     const [token, setToken] = useState<string | null>(null);
     const [loggedIn, setLoggedIn] = useState(false);
@@ -135,6 +142,7 @@ function AdminContent() {
             <button onClick={() => {handleSend()}} className={`${confirm ? "" : "hide"} confirm`}>Confirm</button>
         </div>
         <AddSub />
+        <AddSponsor />
         </>
     )
 }
@@ -143,17 +151,22 @@ function AddSub() {
     const [error, setError] = useState("");
     const [ fade, setFade ] = useState(false);
     const addSubscriber = (sub : string ) => {
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: sub
-            }),
+        const emailTest = /^[a-zA-Z0-9._%+-]+[a-zA-Z0-9.-]@+\.[a-zA-Z]{2,}$/
+        if(emailTest.test(sub)) {
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: sub
+                }),
+            }
+            fetch("https://addsubscriber-pkgqxun4ba-uc.a.run.app", options);
+            setError("Email Added!");
+        } else {
+            setError("Invalid Email")
         }
-        fetch("https://addsubscriber-pkgqxun4ba-uc.a.run.app", options);
-        setError("Email Added!");
         setFade(false);
         setTimeout(() => setFade(true), 50);
         setTimeout(() => {
@@ -164,7 +177,60 @@ function AddSub() {
     return (
         <form className={"addSub"} onSubmit={(e) => { e.preventDefault(); addSubscriber(sub);}}> 
             <label htmlFor={"sub"}>Add Subscriber: </label>
-            <input name={"sub"} type={"email"} placeholder={"------@---.---"} onChange={(e) => {setSub(e.target.value)}} value={sub}></input>
+            <input name={"sub"} type={"text"} placeholder={"------@---.---"} onChange={(e) => {setSub(e.target.value)}} value={sub}></input>
+            <button type={"submit"}>Submit</button>
+            <p className={`error ${fade ? "fade-out" : ""}`}>{error}</p>
+        </form>
+    )
+}
+
+function AddSponsor() {
+    const [sponsor, setSponsor] = useState("")
+    const [ tier, setTier ] = useState("")
+    const [error, setError] = useState("");
+    const [ fade, setFade ] = useState(false);
+    function addSponsor(sponsor: string, tier: string) {
+        if(sponsor.trim() !== "" && tier.trim() !== "") {
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: sponsor,
+                    tier: tier
+                }),
+            }
+            fetch("https://addsponsor-pkgqxun4ba-uc.a.run.app", options)
+            setError("Sponsor Added!");
+        } else {
+            setError("Invalid Sponsor");
+        }
+        setFade(false);
+        setTimeout(() => setFade(true), 50);
+        setTimeout(() => {
+            setError("");
+            setFade(false);
+        }, 3050);
+    }
+    
+    return (
+        <form className={"addSponsor"} onSubmit={(e) => {
+            e.preventDefault();
+            addSponsor(sponsor, tier)
+        }}>
+            <label htmlFor={"sponsor"}>Add Sponsorship: </label>
+            <input name={"sponsor"} type={"text"} onChange={(e) => setSponsor(e.target.value)} value={sponsor} placeholder={"Name"}></input>
+            <select name={"tier"} onChange={(e) => setTier(e.target.value)} value={tier}>
+                <option value={""}>Select Tier</option>
+                <option value={"starting"}>Starting: $50 - $99</option>
+                <option value={"bedrock"}>Bedrock: $100 - $249</option>
+                <option value={"foundation"}>Foundation: $250 - $499</option>
+                <option value={"bronze"}>Bronze: $500 - $999</option>
+                <option value={"silver"}>Silver: $1000 - $2499</option>
+                <option value={"gold"}>Gold: $2500 - $4999</option>
+                <option value={"platinum"}>Platinum: $5000+</option>
+            </select>
             <button type={"submit"}>Submit</button>
             <p className={`error ${fade ? "fade-out" : ""}`}>{error}</p>
         </form>

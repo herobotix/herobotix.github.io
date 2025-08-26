@@ -1,16 +1,24 @@
 import type { Route } from "./+types/home";
 import "app/src/donate.css"
+import {domLoaded, useFadeIn} from "~/src/effects";
 
 export function meta({}: Route.MetaArgs) {
     return [
-        { title: "New React Router App" },
-        { name: "description", content: "Welcome to React Router!" },
+        { title: "Donate | Herobotix" },
     ];
 }
 
 export default function Donate() {
+    const { ref, isVisible} = useFadeIn("up");
+    const ref2 = domLoaded("visible")
     return (<main>
-        <h2 className={"donateTitle"}>Donate with Zeffy</h2>
+        <section className={`about-donate`}>
+            <section ref={ref2} className={"fade-in up"}>
+                <h1>Support Us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </section>
+        <section>
         <iframe title='Donation form powered by Zeffy' src='https://www.zeffy.com/en-US/fundraising/d1fb79e4-9976-4254-942f-19880cde50c9' allowTransparency={true}></iframe>
         <section className={"taxCredit"}>
             <h2>Extra Curricular Activity (ECA) Tax Credits for Arizona Residents</h2>
@@ -44,6 +52,7 @@ export default function Donate() {
             </ul>
                 </div>
             </div>
+        </section>
         </section>
     </main>);
 }

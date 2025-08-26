@@ -1,5 +1,11 @@
 import "../src/calendar.css";
+import type {Route} from "../../.react-router/types/app/routes/+types/home";
 
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "Calendar | Herobotix" },
+    ];
+}
 export default function Calendar() {
     return (
         <main>
