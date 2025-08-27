@@ -1,68 +1,34 @@
 ready(function (){
 	
-	pageBody = document.getElementById("pageBody");
-	pages = {}
-	pages.homepage = function() { /*homepage template*/
-		page = document.getElementsByClassName("homepage template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.volunteer = function() { /*volunteer template*/
-		page = document.getElementsByClassName("volunteer template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.about = function() { /*about template*/
-		page = document.getElementsByClassName("about template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.videos = function() { /*videos template*/
-		page = document.getElementsByClassName("videos template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.teams = function() { /*teams template*/
-		page = document.getElementsByClassName("teams template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	pages.donations = function() { /*donations template*/
-		page = document.getElementsByClassName("donations template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
-	
-	pages.calendar = function() { /*calendar template*/
-		page = document.getElementsByClassName("calendar template")[0].cloneNode(true);
-		page.classList.remove("template");
-		pageBody.textContent = "";
-		pageBody.appendChild(page);
-	}
+	let main = document.getElementById("main");
+	let pagesNames = ["home","sponsors","videos","teams","calendar","sponsorships","taxcredits","volunteer"];
+  let pagesFuncs = {
+    "sponsors": (page) => {
+      let lis = [...page.getElementsByTagName("li")];
+      lis.forEach( li => { li.setAttribute('order', Math.random()) } );
+      lis.sort((lia, lib) => lia.getAttribute('order') - lib.getAttribute('order'));
+      lis.forEach( li => { li.removeAttribute('order') } );
+      page.getElementsByTagName("ul")[0].replaceChildren(...lis);
+    },
+  };
+	let pages = {};
 	
 	function drkmdtoggle(event) {
-		document.body.classList.toggle("drkmd")
+		document.body.classList.toggle("drkmd");
 	}
 	
 	document.getElementById("drkmdbtn").addEventListener("click", drkmdtoggle );
-		
+	
 	function onRedir () {
-		if (location.hash === "#volunteer") pages.volunteer();
-		else if (location.hash === "#about") pages.about();
-		else if (location.hash === "#videos") pages.videos();
-		else if (location.hash === "#teams") pages.teams();
-		else if (location.hash === "#donations") pages.donations();
-		else if (location.hash === "#calendar") pages.calendar();
-		else pages.homepage();
+		let hash = location.hash.slice(1), page;
+		if (!pagesNames.includes(hash)) hash = "home";
+		page = document.getElementsByClassName(hash + " template")[0].cloneNode(true);
+    if (Object.keys(pagesFuncs).includes(hash)) pagesFuncs[hash](page);
+		main.replaceChildren(...page.childNodes);
 	}
 	
 	window.onhashchange = onRedir;
 	
 	window.onhashchange();
+	
 });

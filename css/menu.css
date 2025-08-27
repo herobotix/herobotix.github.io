@@ -117,7 +117,7 @@ body {
 
 /* Misc */
 
-div#pageBody {
+main#main {
 	height: 100vh;
 	margin-top: calc(calc(1.2em + 16px)*1.5);
 }
@@ -170,28 +170,28 @@ div#pageBody {
 }
 
  /* Darkmode */
-	
+
 	body.drkmd {
 		background-color: #222222; /*darkmode background color*/
 		background-image: url(../images/backgrounds/drkmd_background.png); /*darkmode background image*/
 		color: #dddddd;
 	}
-	
-	body.drkmd .nvbar {
+
+	body.drkmd main#main .nvbar {
 		border-color: #dd8800 #000000 #bb6600;
 		background-color: #ffcc00; /*navbar color*/
 	}
-	
-	body.drkmd .nvbar > ul li > a {
+
+	body.drkmd main#main .nvbar > ul li > a {
 	color: #994400;
 }
-	
-	body.drkmd .nvbar > ul li > a:hover {
+
+	body.drkmd main#main .nvbar > ul li > a:hover {
 	background-color: #bb8800; /*selected navbar button color*/
 	color: #661100;
 }
-	
-	body.drkmd .homepageText {
+
+	body.drkmd main#main .homepageText {
 		background-color: #0077ee;
 		background-image: url(../images/backgrounds/drkmd_background_red.png);
 		/*color: #ffee00;*/
@@ -202,27 +202,27 @@ div#pageBody {
 		transition: background-color 0.3s;
 		transition: background-image 0.3s;
 	}
-	
-	
+
+
 /*Breakpoint(Phone Mode)*/
 
 @media only screen and (max-width: 700px){
-	
+
 	.nvbartitle {
 		border-style:hidden hidden solid;
 		border-color: #222222;
 		margin-bottom: 0.35vh;
 	}
-	
+
 	.nvbar {
 		position: absolute;
 		display: inline-block;
 		overflow: hidden;
 		border-style: solid solid solid hidden;
 		border-color: #222277 #333355 #222255 #000000;
-		
+
 	}
-	
+
 	.nvbar > div img {
 		height: calc(1.0em + 16px);
 		display: block;
@@ -232,7 +232,7 @@ div#pageBody {
 		text-align: top;
 		text-align: left;
 	}
-	
+
 	.nvbarimg {
 		height: calc(1.2em + 16px);
 		display: block;
@@ -242,7 +242,7 @@ div#pageBody {
 		text-align: top;
 		text-align: left;
 	}
-	
+
 	.nvbarimgright {
 		height: calc(1.2em + 16px);
 		display: block;
@@ -254,19 +254,19 @@ div#pageBody {
 		float: right;
 		position: static;
 	}
-	
+
 	.nvbar:hover > div img {
 		display: none;
 	}
-	
+
 	.nvbar > div {
 		display: block;
 	}
-	
+
 	.nvbar ul li img.remdrpdwnimg {
 		display: none;
 	}
-	
+
 	.nvbar > ul > li > img {
 		height: calc(1.0em + 16px);
 		display: block;
@@ -274,15 +274,15 @@ div#pageBody {
 		border-style: solid;
 		border-width: 2px;
 	}
-	
+
 	.nvbar:hover > div #drkmdbtnMenu.menu {
 		display: block;
 	}
-	
+
 	#drkmdbtnTitle.title {
 		display: none;
 	}
-	
+
 	.nvbar > ul {
 		display: none;
 		position: sticky;
@@ -291,10 +291,35 @@ div#pageBody {
 		padding: 12px 16px;
 		z-index: 1;
 	}
-	
+
 	.nvbar:hover > ul {
 		display: block;
 	}
-	
+
+main#main a {
+	color: #FFFFFF; /*text color*/
+	text-shadow: 0.5px 0.5px 0.5px #0000AA; /*text color*/
+
+}
+
+#drkmdbtn {
+	max-width: 100%; /*max image width*/
+	height: auto; /*image auto resizing*/
+	position: fixed;
+	right: 3px;
+	top: 3px;
+}
+
+.webCalendar {
+	background-image: url(../images/loading.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 95vh;
+	height:75vh;
+	border:solid 2px #0044bb;
+	border-radius: 1.1vh;
+	width: 100vh;
+	height: 80vh;
 }
 
