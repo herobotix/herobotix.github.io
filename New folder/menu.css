@@ -1,0 +1,219 @@
+body {
+	margin: 0; /*outer border*/
+	color: #020202: /*border color*/;
+	font-family: Georgia, Arial, Sans-serif;
+	background-color: #0077ee; /*background color*/
+	/*background-image: url(../images/backgrounds/background.png); /*background image*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	transition: background-color 0.3s;
+	transition: background-image 0.3s;
+}
+
+.template {
+	display: none;
+}
+
+/* -~Header~- */
+
+.pageTop {
+	position: sticky;
+	top: 0px;
+	left: 50%;
+}
+ 
+/* Navbar Title */
+
+.nvbartitle {
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 1px 1px;
+	color: #009fcf;
+	/*background-image: url(../images/backgrounds/drkmd_background_crimsongold.png);*/
+	transition: background-image 0.5s;
+	background-size: cover;
+	height: 8.5vw;
+}
+
+.nvbartitle div {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/logos/logo_blue.png);
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.nvbartitle a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	vertical-align: center;
+}
+
+.nvbartitle a:hover div{
+	opacity: 0.81;
+}
+
+
+/* Navbar Menu */
+
+.nvbar {
+	border-style: solid hidden;
+	border-color: #222277 #000000 #222255;
+	background-color: #333388; /*navbar color*/
+}
+
+.nvbar > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-size: 1.2em; /*navbar font size*/
+}
+
+.nvbar > ul > span > li {
+	float: left; /*Side the left navbar buttons are located*/
+}
+
+.nvbar > ul > li {
+	float: right; /*Side the right navbar buttons are located*/
+}
+
+.nvbar > ul li > img {
+	height: calc(1.0em + 16px);
+	display: block;
+	border-color: #222244 #222244 #111133 #111133;
+	border-style: solid;
+	border-width: 2px;
+}
+
+.nvbar > ul > li > a {
+	display: block; /*makes padding visible*/
+	color: #cfcfcf; /*right navbar text color*/
+	text-align: center;
+	padding: 8px; /*right navbar padding*/
+	/*order= top right bottom left*/
+	background-color: #333388; /* right navbar button color*/
+	text-decoration: none;
+	transition: color 0s;
+	height: 100%;
+}
+
+.nvbar > ul > span > li > a {
+	display: block; /*makes padding visible*/
+	color: #cfcfcf; /*left navbar text color*/
+	text-align: center;
+	padding: 8px; /*left navbar padding*/
+	/*largest navbar padding = navbar size*/
+	padding-bottom: 0; /*Height Correction*/
+	text-decoration: none;
+	transition: color 0.3s;
+	height: calc(1.0em + 12px);
+}
+
+.nvbar > ul li > a:hover {
+	background-color: #222288; /*selected navbar button color*/
+	transition: background-color 0.3s;
+}
+
+/*.nvbar > ul > li.selected {
+	display: block;
+	color: #cfcfcf;
+	text-align: center;
+	padding: 8px;
+	background-color: #111177;
+}*/
+
+/* Misc */
+
+div#pageBody {
+	height: 100vh;
+	/*margin-top: calc(calc(1.2em + 16px)*1.5);*/
+}
+
+.btn {
+  background-color: #00000000;
+	border: hidden;
+	display: block;
+}
+
+.drkmdbtn.Title {
+	position: fixed;
+	width: 7vh;
+	height: 7vh;
+	right: 3px;
+	top: 3px;
+}
+
+.btn1 {
+	width: 7vh;
+	height: 7vh;
+	position: fixed;
+	right: 50vw;
+	top: 50vh;
+  padding: 0;
+}
+
+.btn1 img {
+	width: 7vh;
+	height: 7vh;
+}
+
+.btn1.Pos1 {
+	right: 40vw;
+	top: 30vh;
+}
+
+.btn1.Pos2 {
+	right: 70vw;
+	top: 60vh;
+}
+
+ /* Darkmode */
+	
+	body.drkmd {
+		background-color: #222222; /*darkmode background color*/
+		/*background-image: url(../images/backgrounds/drkmd_background.png); /*darkmode background image*/
+		color: #dddddd;
+	}
+	
+	body.drkmd .nvbartitle {
+		background-image: url(../images/backgrounds/drkmd_background_crimsonblue.png); /*darkmode background image*/
+	}
+	
+	body.drkmd .nvbartitle div {
+		background-image: url(../images/logos/logo.png);
+	}
+	
+	body.drkmd .nvbar {
+		border-color: #dd8000 #dd8000 #ca6400;
+		background-color: #333388; /*navbar color*/
+		background-image: linear-gradient(#eeaa00, #dd9900);
+	}
+	
+	body.drkmd .nvbar > ul li > a {
+	transition: color 0s;
+	color: #994400;
+}
+	
+	body.drkmd .nvbar > ul li > a:hover {
+	background-color: #bb8800; /*selected navbar button color*/
+	background-image: linear-gradient(#ffbb00, #eeaa00);
+	color: #661100;
+}
+	
+	body.drkmd .homepageText {
+		background-color: #0077ee;
+		/*background-image: url(../images/backgrounds/drkmd_background_brown.png);*/
+		color: #ffe300;
+		text-shadow: 0 0 0.5vw #ffe300;
+		border-color: #111111;
+		transition: border-color 0.3s;
+		transition: background-color 0.3s;
+		transition: background-image 0.3s;
+	}
+	
+/*@media only screen and (max-width: 700px){}*//*Breakpoint(Phone Mode)*/

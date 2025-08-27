@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Herobotix</title>
+		<link rel="icon" type="image/x-icon" href="/images/Logo.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/menu.css"/>
 		<link rel="stylesheet" href="css/teams.css"/>
@@ -13,61 +14,55 @@
 		</script>
 	</head>
 	<body>
-		<div class="pageTop"> <!--*Header-->
+		<div class="pageTop">		 <!--*Header-->
 			<div class="nvbartitle"> <!--*Title-->
-				<a href="#"><img src="images/logo.png" alt="Logo"></a>
-				<img id="drkmdbtn" src="images/buttons/darkmode.png" alt="darkmode">
+				<a href="https://herobotix.com/"><img src="images/logo.png" alt="Logo / Link to Main Website"></a>
 			</div>
-			<nav class="nvbar"> <!--*Menu-->
-				<ul>
-					<span><!--Left Menu-->
-						<li><a href="#">Home</a></li>
-						<li><a href="#volunteer">Volunteer</a></li>
-						<li><a href="#donations">Donations</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#videos">Videos</a></li>
-						<li><a href="#teams">Teams</a></li>
-						<li><a href="#calendar">Calendar</a></li>
+			<div>					 <!--*Menu-->
+				<img id="drkmdbtnTitle" src="images/buttons/darkmode.png" class="title" alt="cube">
+				<nav class="nvbar">
+					<div>			<!--*Buttons Menu-->
+						<img src="images/buttons/dropdown_button.png" alt="cube" class="nvbarimg" >
+						<div>
+							<img id="drkmdbtnMenu" src="images/buttons/darkmode.png" class="menu" alt="cube">
+
+						</div>
+					</div>
+					<ul>			<!--*Navbar Menu-->
+						<span>		<!--Left Menu-->
+							<li><a href="#">Home</a></li>
+							<li><a href="#sponsors">Sponsors</a></li>
+							<li><a href="#videos">Videos</a></li>
+							<li><a href="#teams">Teams</a></li>
+							<li><a href="#calendar">Calendar</a></li>
 					</span>
 					<!--Right Menu-->
-					<li><a href="https://www.zeffy.com/en-US/ticketing/0b441433-ef29-4454-a54d-278cace681b3">Sponsorships</a></li>
+							<li><a href="#volunteer">Volunteer</a></li>
+							<li><a href="#taxcredits">Tax Credits</a></li>
+						<li><a href="#sponsorships">Sponsorships</a></li>
 				</ul>
 			</nav>
 		</div>
-		<div id="pageBody">   <!--*Content-->
+		<main id="main">	 <!--*Content-->
 			<div class="bold">Loading...</div>
-		</div>
-		<div>				  <!--*Templates-->
-			<div class="homepage template"> 
-				Welcome!
+		</main>
+		<div>					<!--*Templates-->
+			<div class="home template">
+				Welcome! New Changes Coming Soon...
 			</div>
-			<div class="volunteer template">
-				
-			</div>
-			<div class="donations template" style="margin-left:40px;">
-				<br/>
-				<div class="donations"><a href="https://www.myschoolbucks.com/ver2/stores/catalog/getproduct.action?productKey=ZZQZ4M84XYRQN1Z">MySchoolBucks - ECA Tax Credits</a></div>
-				<br/>
-				<p>Click the link above to be directed to the MySchoolBucks portal for ECA Tax Credit Donations to Heritage Academy Gateway.</p>
-				<ul>
-					<li>Fill in the form like normal.</li>
-					<li>When asked if this is for a specific scholar, enter "No".</li>
-					<li>Under "Activity/Organization" select "Club", and enter "Herobotix" as the club name.</li>
-					<li>Finish the form and select "Buy Now".</li>
-					<li>Sign in to your MySchoolBucks account, or continue as a Guest.</li>
-					<li>Enter your payment and billing information and select "Place Order".</li>
-					<li><i>You should receive an email confirmation of your donation.</i></li>
-				</ul>
-				<p>*If you would prefer to Pay by check:</p>
-				<ul>
-					<li>Make checks payable to Heritage Academy Gateway.</li>
-					<li>Print and fill out copy of <a href="https://hagateway.com/wp-content/uploads/sites/13/2020/09/Gateway-ECA-Donation-Flier.pdf">this form</a>.</li>
-					<li>Under "activity and/or student", write "Herobotix".</li>
-					<li>Mail directly to the school address: 19705 E. Germann Rd. Queen Creek, AZ 85142.</li>
-				</ul>
-			</div>
-			<div class="about template">
-				
+			<div class="sponsors template">
+        <div style="padding:20px 0px; margin:0px 40px; font-size:1.4em; color:#FFFFFF;">
+          <p style="margin:0px">All Sponsors 2024-2025:</p>
+          <ul>
+            <li>Shauna Geesling</li>
+            <li>Heather Main</li>
+            <li>Armani Melo</li>
+            <li>Adam and LeAnn Thompson</li>
+            <li>Justin Schaub</li>
+            <li>Boeing</li>
+            <li>FIRST</li>
+          </ul>
+        </div>
 			</div>
 			<div class="videos template">
 				
@@ -111,20 +106,46 @@
 				</ul>
 			</div>
 			<div class="calendar template">
-					<div align="center">
-						<iframe
-						class= "webCalendar"
-						src=
-						"
-						https://calendar.google.com/calendar/embed?height=600&wkst=1&
-						bgcolor=%230066dd
-						&ctz=America%2FPhoenix&showTitle=0&showPrint=1&showTabs=1&showCalendars=0&showTz=1&src=Y182ZmMxNDBmODZkODY5N2ZhOGFhZTZmZjM0ZjAwMmUzNjUyMTVjNDIzNjMxNzhlYTQ2MzdkN2QyZDU1YmU0NDJkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&
-						color=%230077ee
-						"
-						frameborder="0"
-						scrolling="no"
-						></iframe>
-					</div>
+				<div align="center">
+					<iframe class= "webCalendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%230066dd&ctz=America%2FPhoenix&showTitle=0&showPrint=1&showTabs=1&showCalendars=0&showTz=1&src=Y182ZmMxNDBmODZkODY5N2ZhOGFhZTZmZjM0ZjAwMmUzNjUyMTVjNDIzNjMxNzhlYTQ2MzdkN2QyZDU1YmU0NDJkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230077ee"	frameborder="0"	scrolling="no"></iframe>
+				</div>
+			</div>
+			<div class="sponsorships template">
+				<div style="position:relative;overflow:hidden;height:1200px;width:100%;">
+          <iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' src='https://www.zeffy.com/en-US/fundraising/d1fb79e4-9976-4254-942f-19880cde50c9' allowpaymentrequest allowTransparency="true"></iframe>
+				</div>
+			</div>
+			<div class="taxcredits template">
+        <div style="margin:0px 40px; font-size:1.4em; color:#FFFFFF;">
+          <br/>
+          <h2>Extra Curricular Activity (ECA) Tax Credits for Arizona Residents</h2>
+          <p>Under A.R.S. §43-1089.01, an individual may claim a <u>nonrefundable tax credit</u> for making cash contributions to a public school located in Arizona for the support of extracurricular activities.	If a taxpayer has at least as much tax liability as their ECA donation, the donation is essentially a free donation.</p>
+          <p>As an Arizona Resident, you can:</p>
+          <ol>
+            <li>Donate up to $200 per individual tax return or $400 per joint tax return by using your ECA tax credit.</li>
+            <li>Forward this web address (<a href="http://www.herobotix.com/#taxcredits">herobitix.com/#taxcredits</a>) to friends and family who reside in Arizona who can also participate in this tax credit option.	They can check out as a guest, so a MySchoolBucks account is NOT required.</li>
+          </ol>
+          <p>Click the following link to be directed to the <a target="_blank" href="https://www.myschoolbucks.com/ver2/stores/catalog/getproduct.action?productKey=ZZQZ4M84XYRQN1Z">MySchoolBucks Portal for ECA Tax Credit Donations</a> at Heritage Academy Gateway.</p>
+          <ul>
+            <li>Fill in the form like normal.</li>
+            <li>When asked if this is for a specific scholar, enter "No".</li>
+            <li>Under "Activity/Organization" select "Club", and enter "Herobotix" as the club name.</li>
+            <li>Finish the form and select "Buy Now".</li>
+            <li>Sign in to your MySchoolBucks account, or continue as a Guest.</li>
+            <li>Enter your payment and billing information and select "Place Order".</li>
+            <li><i>You should receive an email confirmation of your donation.</i></li>
+          </ul>
+          <p>If you prefer to donate by check:</p>
+          <ul>
+            <li>Make checks payable to Heritage Academy Gateway.</li>
+            <li>Print and fill out the <a href="https://hagateway.com/wp-content/uploads/sites/13/2020/09/Gateway-ECA-Donation-Flier.pdf">Extracurriular Activity Donation Form</a>.</li>
+            <li>Under "May give activity and/or student", write "Herobotix" and enter the amount of your donation.</li>
+            <li>Mail the form and check directly to the school address:<br/>&nbsp;&nbsp;19705 E. Germann Rd.<br/>&nbsp;&nbsp;Queen Creek, AZ 85142</li>
+          </ul>
+        </div>
+			</div>
+			<div class="volunteer template">
+
 			</div>
 		</div>
 		<script type="text/javascript" language="javascript" src="js/pages.js"></script>
