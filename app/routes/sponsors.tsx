@@ -75,7 +75,7 @@ type SponsorProps = {
     direction: Direction;
 };
 
-function Sponsor({ keyName, values, index, direction }: SponsorProps) {
+function Sponsor({ keyName, values, direction }: SponsorProps) {
     const { ref, isVisible } = useFadeIn(direction);
     return (
         <div key={keyName} ref={ref} id={keyName} className={`sponsor fade-in ${direction} ${isVisible ? "visible" : ""}`}>

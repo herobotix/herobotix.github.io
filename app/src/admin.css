@@ -32,6 +32,25 @@ form {
             width: 50%;
         }
     }
+    .remember-me {
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1%;
+        margin-bottom: 0;
+        padding: 0;
+        input {
+            width: 20px;
+            height: 20px;
+            
+        }
+        label {
+            width: fit-content;
+            text-align: left;
+            margin-left: 2%;
+        }
+    }
     button {
         transition: border 0.2s ease-in-out, background 0.2s ease-in-out;
         border: 2px solid var(--red);
@@ -159,9 +178,19 @@ main {
 
 .addSponsor {
     background-color: var(--grey);
+    label {
+        color: black;
+    }
+    .select {
+        margin-left: 1%;
+    }
     input {
+        margin-right: 1%;
         background-color: white;
         border: rgb(200, 200, 200) 1px solid;
+    }
+    .error {
+        color: black;
     }
 }
 

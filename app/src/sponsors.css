@@ -80,3 +80,59 @@ main {
         padding: 1%;
     }
 }
+
+@media screen and (max-width: 450px) {
+    body {
+        overflow-x: hidden;
+    }
+    main {
+        width: 100%;
+        overflow-x: hidden;
+        background-color: var(--grey);
+    }
+    .sponsor {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        flex-direction: column;
+        margin-bottom: 5%;
+        .title-sponsor {
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            img {
+                grid-column: 1/-1;
+                grid-row: 1/-1;
+            }
+            h2 {
+                color: black;
+                z-index: 10;
+                grid-column: 1/-1;
+                grid-row: 1/-1;
+                align-self: center;
+            }
+        }
+        div {
+            
+            ul {
+                grid-template-columns: 1fr;
+                border-radius: 0;
+                width: 100%;
+                background-color: var(--blue);
+                li {
+                    color: white;
+                    width: 100%;
+                    border-bottom: 1px solid var(--grey);    
+                    margin: auto;
+                }
+            }
+        }
+        .platinum {
+            grid-template-columns: 1fr;
+        }
+    }
+    .sponsor:nth-of-type(even) {
+        flex-direction: column;
+    }
+}

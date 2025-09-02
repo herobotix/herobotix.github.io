@@ -46,6 +46,7 @@ export default function Admin() {
         const form = e.currentTarget;
         const email = (form.elements.namedItem("email") as HTMLInputElement).value;
         const password = (form.elements.namedItem("password") as HTMLInputElement).value;
+        const remember = (form.elements.namedItem("remember") as HTMLInputElement).checked;
         const errormsg = form.elements.namedItem("errormsg");
         console.log(email, password);
         try {
@@ -54,7 +55,9 @@ export default function Admin() {
             const token = await userCredential.user.getIdToken();
             console.log(token);
             console.log("Logged in:", userCredential.user);
-            localStorage.setItem("adminToken", token);
+            if(remember) {
+                localStorage.setItem("adminToken", token);
+            }
             setToken(token);
         } catch (error) {
             console.error("Login failed", error);
@@ -80,6 +83,10 @@ export default function Admin() {
                     <div>
                         <label htmlFor="password">Password</label>
                         <input id="password" type="password" name="password" required />
+                    </div>
+                    <div className={"remember-me"}>
+                        <input name={"remember"} id={"remember"} type={"checkbox"}></input>
+                        <label htmlFor={"remember"}>Remember Me</label>
                     </div>
                     <button type="submit">Login</button>
                     <p className={"error"}>{error}</p>
@@ -151,7 +158,7 @@ function AddSub() {
     const [error, setError] = useState("");
     const [ fade, setFade ] = useState(false);
     const addSubscriber = (sub : string ) => {
-        const emailTest = /^[a-zA-Z0-9._%+-]+[a-zA-Z0-9.-]@+\.[a-zA-Z]{2,}$/
+        const emailTest = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if(emailTest.test(sub)) {
             const options = {
                 method: 'POST',

@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import {Link, useSearchParams} from "react-router";
 import {useEffect, useState} from "react";
+import DOMPurify from "dompurify"
 import "../src/newsletter.css";
 
 export function meta({}: Route.MetaArgs) {
@@ -29,7 +30,7 @@ export default function Newsletter() {
         <main>
             <article>
                 <h1 className={"title"}>{newsletterData.response.newsletter.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: newsletterData.response.newsletter.content }} />
+                <SafeContent html={newsletterData.response.newsletter.content}/>
             </article>
             <div className={"newsLinks"}>
             {newsletterData.response.prev ? <Link to={`/newsletter?id=${parseInt(number)-1}`} className={"link"}>Previous</Link> : <p></p>}
@@ -37,6 +38,12 @@ export default function Newsletter() {
             </div>
         </main>
     );
+}
+
+function SafeContent({ html }: { html: string }) {
+    const clean = DOMPurify.sanitize(html)
+
+    return <div dangerouslySetInnerHTML={{ __html: clean }} />;
 }
 
 async function getNewsletters(number: Number) {
