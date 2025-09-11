@@ -84,3 +84,12 @@ iframe {
     }
     background-color: var(--lightBlue);
 }
+
+.donateLoader {
+    position: relative;
+    margin: 0 auto -70px;
+    height: 34px;
+    div {
+        margin-top: 3%;
+    }
+}

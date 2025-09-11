@@ -1,6 +1,7 @@
 main {
     padding-top: 1%;
     background-color: var(--grey);
+    min-height: 70vh;
 }
 
 .sponsor:first-of-type {

@@ -22,3 +22,42 @@
 .fade-in.down {
     transform: translateY(-50px);
 }
+
+.loader {
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 70px;
+    margin: auto;
+    margin-top: 2%;
+    div {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: var(--red);
+        margin: 5px;
+        border-radius: 50%;
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    div:nth-child(2) {
+        background-color: var(--white);
+        animation-delay: 0.2s;
+        left: 30px;
+    }
+    div:nth-child(3) {
+        background-color: var(--blue);
+        animation-delay: 0.4s;
+        left: 60px;
+    }
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-10px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}

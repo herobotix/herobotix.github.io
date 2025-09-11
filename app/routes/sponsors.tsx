@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import "../src/sponsors.css"
 import type {Route} from "../../.react-router/types/app/routes/+types/home";
-import {useFadeIn, type Direction} from "~/src/effects";
+import {useFadeIn, type Direction, Loader} from "~/src/effects";
+import {getSponsors} from "~/routes/home";
 export function meta({}: Route.MetaArgs) {
     return [
         { title: "Sponsors | Herobotix  " },
@@ -17,39 +18,45 @@ const sponsorTitles: Record<string, string> = {
     "starting": "Starting Sponsor - Herobotix Inceptus"
 }
 export default function Sponsors() {
-    const [ sponsors, setSponsors ] = useState<Record<string, string[]>>({
-        "platinum": [],
-        "gold": [],
-        "silver": [],
-        "bronze": [],
-        "foundation": [],
-        "bedrock": [],
-        "starting": []
-    })
+    interface Sponsors {
+        platinum: string[];
+        gold: string[];
+        silver: string[];
+        bronze: string[];
+        foundation: string[];
+        bedrock: string[];
+        starting: string[];
+    }
+    
+    const [ sponsors, setSponsors ] = useState<Sponsors>({
+        platinum: [],
+        gold: [],
+        silver: [],
+        bronze: [],
+        foundation: [],
+        bedrock: [],
+        starting: [],
+    });
+    const [loading, setLoading] = useState<boolean>(true);
     useEffect(() => {
-        async function getSponsors() {
-            const response = await fetch("https://getsponsors-pkgqxun4ba-uc.a.run.app")
-            const data = await response.json()
-
-            const sponsors: Record<string, string[]> = {
-                "platinum": [],
-                "gold": [],
-                "silver": [],
-                "bronze": [],
-                "foundation": [],
-                "bedrock": [],
-                "starting": []
-            }
-
-            data.response.forEach((sponsor: { tier: string; name: string }) => {
-                if (sponsors[sponsor.tier]) {
-                    sponsors[sponsor.tier].push(sponsor.name)
+        async function checkSponsors() {
+            if(localStorage.getItem("sponsors")) {
+                console.log("it exists")
+                const sponsors = JSON.parse(localStorage.getItem("sponsors") as string);
+                const dateGotten = new Date(sponsors.timeStamp)
+                delete sponsors.timeStamp
+                const now = new Date();
+                if(now.getTime() - dateGotten.getTime() >= (60*60*24*1000)) {
+                    setSponsors(await getSponsors());
+                } else {
+                    setSponsors(sponsors);
                 }
-            })
-            console.log(sponsors)
-            setSponsors(sponsors)
+            } else {
+                setSponsors(await getSponsors());
+            }
+            setLoading(false);
         }
-        getSponsors()
+        checkSponsors();
     }, [])
     let index = 0
     return (
@@ -58,6 +65,7 @@ export default function Sponsors() {
                 <h1>Thank you to our sponsors</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
+            {loading ? <Loader/> : <></>}
             {Object.entries(sponsors).map(([key, values], i) => {
                     if(values.length > 0) {
                         index++

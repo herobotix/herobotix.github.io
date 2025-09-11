@@ -67,3 +67,13 @@ export function useWindowSize() {
     
     return width;
 }
+
+export function Loader() {
+    return (
+        <div className={"loader"}>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    )
+}

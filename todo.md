@@ -14,13 +14,13 @@
 - 
 ### Art 
 - [ ] Sponsorship tiers
-- [ ] Up-to-date Logos
+- [x] Up-to-date Logos
 
 ## Frontend
 
 ### MOBILE FOR ALL 
 
-- [ ] loading modal thingy
+- [x] loading modal thingy
 
 [x] sponsor page
 
@@ -45,3 +45,5 @@
 
 ## Backend
 [x] add/store sponsors with tier
+
+- [x] faster sponsor load time. load on home and store?

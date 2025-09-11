@@ -1,10 +1,11 @@
 import type { Route } from "./+types/home";
 import {Link} from "react-router";
-import {useFadeIn, domLoaded} from "~/src/effects";
+import {useFadeIn, domLoaded, Loader} from "~/src/effects";
 import type { Direction } from "~/src/effects"
 import "app/src/home.css"
 
 import { teams } from "../src/data.json"
+import {useEffect} from "react";
 const aboutParagraph = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. Duis sapien ipsum, lacinia eget imperdiet at, posuere et lectus. Quisque maximus augue a lacus maximus consectetur. Quisque scelerisque efficitur tellus quis dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed placerat urna ut arcu pellentesque feugiat. Duis vel mattis felis. Nulla ullamcorper vitae purus vel varius. Mauris vel semper nibh. Nam dictum, turpis et iaculis rutrum, enim nibh laoreet ante, et mattis dui sem vitae mi. Cras dictum nisl ac sem viverra, sit amet bibendum nunc lacinia. Aenean suscipit arcu non elit lobortis, a maximus nisi dignissim. Ut sollicitudin rhoncus velit, eu laoreet velit tempor id. Integer dapibus, lorem at rhoncus efficitur, nisi ex volutpat nisi, vitae porta lorem ligula at nisi. Praesent finibus velit in libero tincidunt blandit nec in turpis.`;
 const sponsorMessage = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. Duis sapien ipsum, lacinia eget imperdiet at, posuere et lectus.";
 
@@ -32,7 +33,53 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export async function getSponsors() {
+    const response = await fetch("https://getsponsors-pkgqxun4ba-uc.a.run.app");
+    const data = await response.json()
+
+    interface Sponsors {
+        platinum: string[];
+        gold: string[];
+        silver: string[];
+        bronze: string[];
+        foundation: string[];
+        bedrock: string[];
+        starting: string[];
+        timeStamp: Date;
+    }
+
+    const sponsors: Sponsors = {
+        platinum: [],
+        gold: [],
+        silver: [],
+        bronze: [],
+        foundation: [],
+        bedrock: [],
+        starting: [],
+        timeStamp: new Date()
+    };
+
+    data.response.forEach((sponsor: { tier: keyof Omit<Sponsors, "timeStamp">; name: string }) => {
+        sponsors[sponsor.tier].push(sponsor.name);
+    });
+    
+    
+    localStorage.setItem("sponsors", JSON.stringify(sponsors));
+    return sponsors;
+}
 export default function Home() {
+    useEffect(() => {
+        if(localStorage.getItem("sponsors")) {
+            const sponsors = JSON.parse(localStorage.getItem("sponsors") as string);
+            const dateGotten = new Date(sponsors.timeStamp)
+            const now = new Date();
+            if(now.getTime() - dateGotten.getTime() >= (60*60*24*1000)) {
+                getSponsors();
+            }
+        } else {
+            getSponsors();
+        }
+    })
   return (
       <main>
         <About/>

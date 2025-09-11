@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import "app/src/donate.css"
-import {domLoaded, useFadeIn} from "~/src/effects";
+import {domLoaded, Loader, useFadeIn} from "~/src/effects";
+import {useState} from "react";
 
 export function meta({}: Route.MetaArgs) {
     return [
@@ -10,6 +11,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Donate() {
     const { ref, isVisible} = useFadeIn("up");
+    const [ loading, setLoading ] = useState(true);
     const ref2 = domLoaded("visible")
     return (<main>
         <section className={`about-donate`}>
@@ -19,7 +21,8 @@ export default function Donate() {
             </section>
         </section>
         <section>
-        <iframe title='Donation form powered by Zeffy' src='https://www.zeffy.com/en-US/fundraising/d1fb79e4-9976-4254-942f-19880cde50c9' allowTransparency={true}></iframe>
+            {loading && <div className={"donateLoader"}><Loader /></div>}
+        <iframe onLoad = {() => setLoading(false)} title='Donation form powered by Zeffy' src='https://www.zeffy.com/en-US/fundraising/d1fb79e4-9976-4254-942f-19880cde50c9' allowTransparency={true}></iframe>
         <section className={"taxCredit"}>
             <h2>Extra Curricular Activity (ECA) Tax Credits for Arizona Residents</h2>
             <div>
