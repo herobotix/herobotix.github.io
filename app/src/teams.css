@@ -1,0 +1,145 @@
+.intro {
+    background: var(--grey);
+    padding: 1%;
+    h1 {
+        text-align: center;
+        color: var(--red);
+    }
+    p {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 0.5%;
+        font-size: 1.1rem;
+    }
+}
+
+.teamBio {
+    padding: 1%;
+    background-color : var(--lightBlue);
+    section {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        height: 100%;
+        .image {
+            img {
+                width: 400px;
+                height: 400px;
+            }
+        }
+        div {
+                padding-left: 1%;
+                padding-right: 1%;
+                height: 100%;
+                h2 {
+                    font-size: 3em;
+                    color: white;
+                    border-bottom: 2px solid var(--white);
+                }
+                p {
+                    color: white;
+                    padding-top: 1%;
+                    margin-bottom: 3%;
+                }
+            .teamLink {
+                background: var(--red);
+                border: 2px solid var(--red);
+                border-radius: 10px;
+                padding: 1%;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: all 0.2s ease-in-out;
+            }
+            .teamLink:hover {
+                background: none;
+                border: 2px solid var(--white);
+            }
+        }
+    }
+}
+
+.teamBio:nth-of-type(odd) {
+    background-color: var(--grey);
+    section {
+        flex-direction: row;
+
+        div {
+            h2 {
+                color: var(--red);
+                border-bottom-color: #000;
+            }
+            p {
+                color: black;
+            }
+            .teamLink {
+                transition: all 0.2s ease-in-out;
+                background-color: var(--lightBlue);
+                border: 2px solid var(--lightBlue);
+            }
+            .teamLink:hover {
+                background: none;
+                border: 2px solid black;
+                color: black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .teamBio {
+        width: 100%;
+        padding: 0;
+        section {
+            flex-direction: column-reverse;
+            padding-bottom: 5%;
+            img {
+                width: 95%;
+                margin: auto;
+                margin-top: 2.5%;
+            }
+            div {
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+                .teamLink {
+                    display: block;
+                    width: 80%;
+                    text-align: center;
+                    margin: auto;
+                    padding: 2%;
+                }
+            }
+        }
+        .image {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            margin: 0;
+            padding: 0;
+            img {
+                grid-column: 1/2;
+                grid-row: 1/1;
+            }
+        }
+        .arrows {
+            position: relative;
+            grid-column: 1/2;
+            grid-row: 1 / -1;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            justify-content: space-between;
+            svg {
+                width: 50px;
+                height: 90%;
+                margin: auto 0;
+                background-color: rgba(0, 0, 0, 0.49);
+                cursor: pointer;
+                g {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

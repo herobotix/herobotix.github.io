@@ -1,0 +1,218 @@
+
+.adminLogin {
+    background-color: var(--grey);
+    height: 100vh;
+    padding-top: 5%;
+}
+
+form {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    div {
+        width: 80%;
+        margin: auto;
+        margin-top: 1%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        label {
+            width: 100px;
+            text-align: right;
+            font-size: 1.2em;
+        }
+        input {
+            height: 30px;
+            width: 50%;
+        }
+    }
+    .remember-me {
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1%;
+        margin-bottom: 0;
+        padding: 0;
+        input {
+            width: 20px;
+            height: 20px;
+            
+        }
+        label {
+            width: fit-content;
+            text-align: left;
+            margin-left: 2%;
+        }
+    }
+    button {
+        transition: border 0.2s ease-in-out, background 0.2s ease-in-out;
+        border: 2px solid var(--red);
+        background: var(--red);
+        height: 40px;
+        width: 80%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: none;
+        border: 2px solid var(--white);
+    }
+}
+.editorContent {
+    width: 90%;
+    margin: auto;
+    padding-top: 3%;
+    padding: 1%;
+    background-color: var(--white);
+    min-height: 70vh;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    .control-group {
+        border-bottom: 1px solid rgb(200, 200, 200);
+        padding-bottom: 0.5%;
+    }
+    .tiptap {
+        padding-top: 2%;
+    }
+}
+.titleSection {
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+    background: white;
+    border-top-right-radius: 1.5em;
+    border-top-left-radius: 1.5em;
+    margin-top: 1%;
+}
+main {
+    background-color: var(--grey);
+    padding-top: 2%;
+    input {
+        background-color: var(--grey);
+        border: none;
+        padding: 0.5%;
+    }
+}
+.send {
+    background-color: var(--lightBlue);
+    width: 20%;
+    padding: 1%;
+    border: none;
+    border-radius: 1em;
+    margin-left: 4%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    z-index: 10;
+}
+.send:hover {
+    background-color: #39527d;
+}
+.confirm {
+    width: 20%;
+    transition: width 0.2s ease-in-out, padding 0.2s ease-in-out;
+    overflow: hidden;
+    padding: 1%;
+    margin: 0;
+    margin-left: 1%;
+    border: none;
+    background-color: var(--red);
+    border-radius: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+}
+.hide {
+    padding: 0;
+    width: 0;
+}
+
+.addSub,  .addSponsor {
+    width: 100%;
+    background-color: var(--lightBlue);
+    display: block;
+    padding: 2%;
+    height: fit-content;
+    label {
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    input {
+        background-color: var(--grey);
+    }
+    button {
+        width: 20%;
+        margin-left: 1%;
+    }
+    .error {
+        display: inline;
+        margin-left: 2%;
+        opacity: 1;
+        transition: opacity 3s ease-in-out;
+        font-size: 1.3em;
+    }
+    .fade-out {
+        opacity: 0;
+    }
+}
+
+.addSponsor {
+    background-color: var(--grey);
+    label {
+        color: black;
+    }
+    .select {
+        margin-left: 1%;
+    }
+    input {
+        margin-right: 1%;
+        background-color: white;
+        border: rgb(200, 200, 200) 1px solid;
+    }
+    .error {
+        color: black;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    form {
+        padding: 5%;
+        div {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            label {
+                text-align: center;
+            }
+            input {
+                width: 100%;
+                margin-bottom: 1%;
+            }
+        }
+        button {
+            margin: auto;
+            margin-top: 5%;
+        }
+    }
+}

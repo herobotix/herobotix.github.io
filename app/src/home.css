@@ -1,0 +1,214 @@
+@import url("./effects.css");
+main {
+    
+}
+html {
+    overflow-y: scroll;
+}
+.about {
+    section {
+        background-color: var(--grey);
+        display: flex;
+        padding: 1%;
+        img {
+            width: 600px;
+            
+        }
+        div {
+            padding-left: 2%;
+            padding-right: 2%;
+            h1 {
+                color: var(--red);
+                font-size: 2.7em;
+                margin-bottom: 2%;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+.teams {
+    background-color: var(--lightBlue);
+    padding: 2%;
+    h1 {
+        color: var(--white);
+        font-size: 3em;
+        padding-bottom: 2%;
+        text-align: center;
+    }
+    div {
+        color: var(--white);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .teamSection {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            color: var(--white);
+            img {
+                width: 300px;
+                margin: auto;
+                margin-bottom: 2%;
+            }
+            h2 {
+                text-align: center;
+                font-size: 2.5em;
+            }
+            p {
+                margin-top: 1%;
+                text-align: center;
+                width: 400px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.sponsors {
+    min-height: 400px;
+    background: url("/images/IMG20241205170438.jpg") center center no-repeat;
+    display: flex;
+    align-items: center;
+    section {
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(37, 74, 138, 0.74);
+        margin-left: 5%;
+        margin-right: 5%;
+        div {
+            margin-left: 5%;
+            min-height: 300px;
+            min-width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                color: white;
+                font-size: 3em;
+                margin-bottom: 2%;
+            }
+            .mobileTag {
+                display: none;
+            }
+            .button {
+                margin-top: 2%;
+                border: 2px solid rgb(240, 69, 49);
+                background-color: rgba(240, 69, 49, 1);
+                font-size: 2em;
+                color: white;
+                border-radius: 10px;
+                padding: 2%;
+                transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+                text-decoration: none;
+            }
+            .button:hover {
+                background-color: rgba(240, 69, 49, 0.00);
+                border: 2px solid white;
+            }
+        }
+        p {
+            color: white;
+            font-size: 1.4em;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        overflow-x: hidden;
+    }
+    .about {
+        width: 100vw;
+        section {
+            flex-direction: column;
+            img {
+            }
+            h1 {
+                text-align: center;
+                margin-top: 2%;
+            }
+            p {
+            }
+            margin-bottom: 1%;
+        }
+    }
+    .teams {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        section {
+            margin: 0;
+            padding: 0;
+            h1 {
+                font-weight: bolder;
+                font-size: 3em;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            div {
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                .teamSection {
+                    margin-bottom: 3%;
+                    img {
+                        width: 85%;
+                        margin: auto;
+                        margin-top: 5%;
+                        padding: 0;
+                    }
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .sponsors {
+        min-height: 0;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        section {
+            height: 100%;
+            min-height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            align-items: start;
+            flex-direction: column;
+            div {
+                min-height: 100%;
+                min-width: 0;
+                width: 100%;
+                height: fit-content;
+                padding: 0;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                margin-left: 0;
+                h1 {
+                    text-align: center;
+                    margin: auto;
+                }
+                .mobileTag {
+                    display: block;
+                    margin: 2%;
+                    font-size: 1.3em;
+                }
+                .button {
+                }
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+}

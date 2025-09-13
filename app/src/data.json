@@ -1,0 +1,25 @@
+{
+  "teams": [
+    {
+      "name": "C.I.S.",
+      "link": "https://cis.herobotix.com/",
+      "image": "/images/cis_logo.png",
+      "descriptionShort": "C.I.S is a 4th year team who is focused on advocating for STEM in our community.",
+      "descriptionLong": "We at C.I.S are focused on spreading stem through our community. We are always making meaningful steps to accomplishing our goal-both on and off the field. Over the past few years, we have won multiple awards during our competitions. As we continue to grow, so does our impact. We’re proud of what we’ve accomplished so far and even more excited about what lies ahead as we keep pushing boundaries and expanding opportunities in STEM."
+    },
+    {
+      "name": "Beanie Bots",
+      "link": "https://beaniebots.herobotix.com/",
+      "image": "/images/beaniebots_logo.png",
+      "descriptionShort": "The Beaniebots team is a team that loves building bridges with each other and other teams, always looking for ways to improve themselves and their robot.",
+      "descriptionLong": "We are a team that is filled with fun and crazy new ideas, we love to have fun and be at the forefront of the top scorers. Beaniebots always tries to let every idea take wing, so that during our planning meetings we can mash up the ideas for the one we find to be the strongest for our strategy. As we go through the season we split the robot into modules for everyone to have a job and always be contributing to the overall team. When we don’t have robots to build we make merchandise so we are known in every competition."
+    },
+    {
+      "name": "Spar-Tech",
+      "link": "https://spartech.herobotix.com/",
+      "image": "/images/spartech_logo.png",
+      "descriptionShort": "Spar-Tech is Herobotix's rookie team, a perfect place for anyone interested in engineering, programming, or marketing",
+      "descriptionLong": "Spar-Tech is the best place for anyone interested in the world of robotics to get started. Even though we are a team of rookies, we have won several awards, and attended state championships multiple times. We are focused on learning and growing as a team, and helping the community learn what makes robotics so fun." 
+    }
+  ]
+}

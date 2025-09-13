@@ -1,0 +1,11 @@
+.webCalendar {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    left: 5%;
+}
+
+main {
+    height: 85vh;
+    background-color: var(--grey);
+}
