@@ -6,8 +6,8 @@ import "app/src/home.css"
 
 import { teams } from "../src/data.json"
 import {useEffect} from "react";
-const aboutParagraph = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. Duis sapien ipsum, lacinia eget imperdiet at, posuere et lectus. Quisque maximus augue a lacus maximus consectetur. Quisque scelerisque efficitur tellus quis dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed placerat urna ut arcu pellentesque feugiat. Duis vel mattis felis. Nulla ullamcorper vitae purus vel varius. Mauris vel semper nibh. Nam dictum, turpis et iaculis rutrum, enim nibh laoreet ante, et mattis dui sem vitae mi. Cras dictum nisl ac sem viverra, sit amet bibendum nunc lacinia. Aenean suscipit arcu non elit lobortis, a maximus nisi dignissim. Ut sollicitudin rhoncus velit, eu laoreet velit tempor id. Integer dapibus, lorem at rhoncus efficitur, nisi ex volutpat nisi, vitae porta lorem ligula at nisi. Praesent finibus velit in libero tincidunt blandit nec in turpis.`;
-const sponsorMessage = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec varius nunc. Aliquam convallis dictum purus, eu porta est suscipit id. Duis sapien ipsum, lacinia eget imperdiet at, posuere et lectus.";
+const aboutParagraph = "We are the Herobotix robotics club. We love to push the boundaries of the minds of our students and each other. Each year we participate in The First Tech Challenge (FTC). FTC creates new challenges every school year which include mechanical, coding, and even marketing challenges to race to the top and mark themselves as the most advanced team. We strive to follow the FTC motto of Gracious Professionalism, winning graciously and generously aiding other teams when their robots break down. We are the Herobotix Robotics club.";
+const sponsorMessage = "We can't do this without your support! Donating helps Herobotix buy parts, make swag, and attend competitions. Any amount helps, so donate today to help the future of Herobotix.";
 
 type TeamProps = {
   team: {

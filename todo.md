@@ -3,13 +3,13 @@
 ## FOR STUDENTS
 
 ### Writing
-- [ ] About us
-- [ ] Support us
+- [x] About us
+- [x] Support us
 - [ ] Team Small description x 3
 - [ ] Team Large description x 3
 - [ ] About our teams
 - [ ] why you should Donate
-- [ ] We love our sponsors
+- [x] We love our sponsors
 - [ ] site description (one for each page if someone wants to)
 - 
 ### Art 

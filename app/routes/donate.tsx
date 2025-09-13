@@ -17,7 +17,7 @@ export default function Donate() {
         <section className={`about-donate`}>
             <section ref={ref2} className={"fade-in up"}>
                 <h1>Support Us</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>	We use donations for every aspect of the entire robotics club. The first way that we use the donation is to use it to purchase the game field for the year, the most important product, because we need it to practice and tune our robots. The second way that we use your appreciated donation is that we use it to buy parts and equipment for production of new homemade parts by the team’s designers. The final thing we do with your donation is we save it for a rainy day when we need it to buy another vital piece of equipment or field. We thank you for your donation, and we thank you greatly.</p>
             </section>
         </section>
         <section>

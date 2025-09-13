@@ -63,7 +63,7 @@ export default function Sponsors() {
         <main>
             <section className={"sponsor-intro"}>
                 <h1>Thank you to our sponsors</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Herobotix relies on the genorosity of sponsorships and donations to keep doing what we love. Donations help us attend competitions, purchase parts for the robots, and create awesome swag for events. Your contributions help us learn new skills, solve challenging problems, and represent our community on a bigger stage. We are incredibly grateful for the encouragement and investment of those who believe in our mission.</p>
             </section>
             {loading ? <Loader/> : <></>}
             {Object.entries(sponsors).map(([key, values], i) => {
