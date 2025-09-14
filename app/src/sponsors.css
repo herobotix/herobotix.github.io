@@ -17,6 +17,9 @@ main {
     display: flex;
     div {
         width: 100%;
+        img {
+            display: none;
+        }
     }
     .title-sponsor {
         margin-right: 1%;
