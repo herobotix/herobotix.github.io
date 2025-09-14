@@ -39,7 +39,7 @@ export default function Donate() {
             <ul>
                 <li>Fill in the form like normal.</li>
                 <li>When asked if this is for a specific scholar, enter "No".</li>
-                <li>Under "Activity/Organization" select "Club", and enter "Herobotix" as the club name.</li>
+                <li>Under "Activity/Organization" select "Club", and enter "HAG Herobotix" as the club name.</li>
                 <li>Finish the form and select "Buy Now".</li>
                 <li>Sign in to your MySchoolBucks account, or continue as a Guest.</li>
                 <li>Enter your payment and billing information and select "Place Order".</li>
